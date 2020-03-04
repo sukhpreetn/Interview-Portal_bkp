@@ -1,0 +1,96 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE HTML>
+<!--
+   Cube by FreeHTML5.co
+   Twitter: http://twitter.com/gettemplateco
+   URL: http://freehtml5.co
+   -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Cube &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+      <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+      <meta name="author" content="FreeHTML5.co" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+      <!-- Icomoon Icon Fonts-->
+      <link rel="stylesheet" href="{% static 'css/icomoon.css'%}">
+      <!-- Themify Icons-->
+      <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+      <!-- Bootstrap  -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+      <!-- Theme style  -->
+      <link rel="stylesheet" href="{% static 'css/style.css'%}">
+   </head>
+   <body>
+      <div class="gtco-loader"></div>
+      <div id="page">
+         <header id="gtco-header" class="gtco-cover" role="banner">
+            <div class="gtco-container">
+               <div class="display-tc">
+                     <p><strong>Test Report.</strong></p>
+                     <p><strong>Your total score is : {{score}} %</strong></p>
+                                <a href="{% url 'AIP:pickskill' %}" class="btn btn-white">Start Over</a></li>
+                     <p></p>
+
+                     <style>
+                        table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        }
+                        th, td {
+                        padding: 5px;
+                        }
+                        th {
+                        text-align: left;
+                        }
+                     </style>
+                     </head>
+                     <body>
+                        <table style="width:100%">
+                           <tr>
+                              <th>Concept</th>
+                              <th>Score</th>
+                           </tr>
+                        </table>
+                        <p></p>
+                        <p><strong>Would you like to add a Comment or any suggestions:</strong></p>
+                        <dd><textarea rows=4 cols =100  name="ring">
+                           </textarea>
+                           <br></br>
+                        <p><strong>Add a New Question:</strong></p>
+                        <dd><textarea rows=4 cols =100  name="rdir">
+                           </textarea>
+                           <br></br>
+                        <dt>Upload a Question:
+                        <dd><input type="file" accept=".csv,text/plain,text/html" /></dd>
+                  </div>
+               </div>
+            </div>
+         </header>
+      </div>
+      </div>
+      <!-- jQuery -->
+      <script src="{% static 'js/jquery.min.js'%}"></script>
+      <!-- jQuery Easing -->
+      <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+      <!-- Bootstrap -->
+      <script src="{% static 'js/bootstrap.min.js'%}"></script>
+      <!-- Waypoints -->
+      <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+      <!-- Carousel -->
+      <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+      <!-- Magnific Popup -->
+      <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+      <script src="{% static 'js/magnific-popup-options.js'%}"></script>
+      <!-- Main -->
+      <script src="{% static 'js/main.js' %}"></script>
+      </div>
+   </body>
+</html>
