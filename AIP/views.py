@@ -108,15 +108,8 @@ def quiz(request):
 
     total_questions = questions.count()
     question = questions[0]
-    #return HttpResponse(question.difficulty_score)
-    #return HttpResponse(curr_difficulty_score)
-    #request.session['curr_difficulty_score'] = question.difficulty_score
     context = {'total_q_asked': total_q_asked, 'question': question}
 
-    #curr_difficulty_score = question.no_times_anwered_incorrectly / (
-    #            question.no_times_anwered_correctly + question.no_times_anwered_incorrectly)
-    #request.session['curr_difficulty_score'] = curr_difficulty_score
-    #total_q_asked += 1
     if request.method == 'POST':
         option = request.POST.get('options')
         q = Question(question.pk)
@@ -130,7 +123,6 @@ def quiz(request):
             total_q_ans_correct +=1
             ans.save()
         else:
-            #return HttpResponse("NO match")
             ans.ans_option = option
             ans.is_correct = False
             question.no_times_anwered_incorrectly += 1
@@ -158,7 +150,6 @@ def quiz(request):
 
         return render(request, 'AIP/quiz.html',context)
     else:
-        #request.session['curr_difficulty_score'] = question.difficulty_score
         return render(request, 'AIP/quiz.html',context)
 
 def report(request):
