@@ -13,10 +13,10 @@ class Question(models.Model):
     q_option4                    = models.CharField(max_length=200,default='')
     q_answer                     = models.CharField(max_length=20)
     q_ask_time                   = models.DateTimeField(default=datetime.now, blank=True)
-    no_times_ques_served         = models.IntegerField(blank=True, null=True)
-    no_times_anwered_correctly   = models.IntegerField(blank=True, null=True)
-    no_times_anwered_incorrectly = models.IntegerField(blank=True, null=True)
-    difficulty_score             = models.DecimalField( max_digits = 5, decimal_places = 2)
+    no_times_ques_served         = models.IntegerField(default=0)
+    no_times_anwered_correctly   = models.IntegerField(default=0)
+    no_times_anwered_incorrectly = models.IntegerField(default=0)
+    difficulty_score             = models.DecimalField(max_digits = 5, decimal_places = 2)
 
     def __str__(self):
         return self.q_text

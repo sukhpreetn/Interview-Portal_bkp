@@ -9,6 +9,7 @@ urlpatterns = [
     path('pickskill/', views.pickskill, name='pickskill'),
     path('begin/', views.begin, name='begin'),
     path('quiz/', views.quiz, name='quiz'),
+    path('quizsimple/', views.quizsimple, name='quizsimple'),
     path('report/', views.report, name='report'),
 
 ]
