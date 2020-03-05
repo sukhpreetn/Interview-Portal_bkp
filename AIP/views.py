@@ -128,13 +128,11 @@ def quiz(request):
             question.no_times_anwered_incorrectly += 1
             ans.save()
 
-
-        #new_difficulty_score = question.no_times_anwered_incorrectly / ( question.no_times_anwered_correctly + question.no_times_anwered_incorrectly)
-
         Question.objects.filter(pk=q.pk).update(no_times_ques_served=question.no_times_ques_served,no_times_anwered_correctly=question.no_times_anwered_correctly,no_times_anwered_incorrectly=question.no_times_anwered_incorrectly,difficulty_score=curr_difficulty_score)
         score = (total_q_ans_correct / total_q_asked) * 100
 
-        curr_difficulty_score = question.no_times_anwered_incorrectly / ( question.no_times_anwered_correctly + question.no_times_anwered_incorrectly)
+        #curr_difficulty_score = question.no_times_anwered_incorrectly / ( question.no_times_anwered_correctly + question.no_times_anwered_incorrectly)
+        curr_difficulty_score = question.no_times_anwered_incorrectly / question.no_times_ques_served
 
         questions = Question.objects.filter(q_subject=subject, q_rank=rank).filter(difficulty_score__gt=curr_difficulty_score).order_by('difficulty_score')
         if questions.count() == 0:
