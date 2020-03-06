@@ -34,9 +34,9 @@
          <header id="gtco-header" class="gtco-cover" role="banner">
             <div class="gtco-container">
                <div class="display-tc">
+                  <form method ="post" enctype="multipart/form-data" action="/upload/">> {%csrf_token%}
                      <p><h1><strong>Test Results.</strong></p></h1>
                      <p><strong>Total score  : {{score}} %</strong></p>
-
                      <a href="{% url 'AIP:pickskill' %}" class="btn btn-white">Start Over</a></li>
                      <p></p>
 
@@ -60,18 +60,23 @@
                               <th>Score</th>
                            </tr>
                         </table>
-                        <p></p>
                         <p><strong>Would you like to add a Comment or any suggestions:</strong></p>
                         <dd><textarea rows=4 cols =100  name="ring">
                            </textarea>
-                           <br></br>
                         <p><strong>Add a New Question:</strong></p>
                         <dd><textarea rows=4 cols =100  name="rdir">
-                           </textarea>
-                           <br></br>
+                        </textarea></dd>
+                        <br>
                         <dt>Upload a Question:
-                        <dd><input type="file" accept=".csv,text/plain,text/html" /></dd>
+                           <input type="file" name="document" >
+                           <br>
+                           <input type="submit"> Upload File
+                            {% if url %}
+                               Uploaded File : <a href = "{{ url }}" style="color:maroon;">{{url}}</a>
+                             {% endif %}
+
                   </div>
+               </form>
                </div>
             </div>
          </header>

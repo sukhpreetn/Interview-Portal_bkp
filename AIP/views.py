@@ -3,6 +3,7 @@ import datetime
 from django.http import HttpResponse, request
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from django.utils.datastructures import MultiValueDictKeyError
+from django.core.files.storage import FileSystemStorage
 
 from .forms import TakeQuizForm
 
@@ -11,6 +12,7 @@ from .models import Question,Answer, Comment
 from django.http import HttpResponse
 import json
 import  random
+
 
 def index(request):
     return render(request, 'AIP/index.html')
@@ -205,3 +207,12 @@ def report(request):
     score = request.session['score']
     return render(request, 'AIP/report.html', {'score': score})
 
+
+def upload(request):
+    context   = {}
+    if request.method == 'POST':
+        uploaded_file = request.FILES['document']
+        fs = FileSystemStorage()
+        name = fs.save(uploaded_file.name,uploaded_file)
+        context['url'] = fs.url(name)
+    return  render(request,'AIP/report.html',context)

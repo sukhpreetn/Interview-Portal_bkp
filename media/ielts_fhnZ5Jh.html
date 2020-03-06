@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema# ">
+   <head>
+      <meta charset="utf-8" />
+      <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"80b8504cce",applicationID:"140263710"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-63735582-4", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script><script src="/sites/default/files/hotjar/hotjar.script.js?q6awbf"></script><script>var _hmt = _hmt || [];
+         (function() {
+         var hm = document.createElement('script');
+         hm.src = 'https://hm.baidu.com/hm.js?26adf5e5bbdbc85e894a11335becab78';
+         var s = document.getElementsByTagName('script')[0];
+         s.parentNode.insertBefore(hm, s);
+         })();
+      </script>
+      <meta name="title" content="IELTS Mock Test 2020 January | IELTS Online Tests" />
+      <meta property="og:site_name" content="IELTS Online Tests" />
+      <link rel="canonical" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january" />
+      <meta name="description" content="IELTS Mock Test 2020 January is one of the best most wanted IELTS simulation test books. Its practice tests was taken based on real, past exam papers which submitted by students and IELTS certified teachers. Each practice test contains 4 modules IELTS Listening, Reading, Writing. IELTS Mock Test 2020 January was published on Sat, 02/08/2020 - 00:47
+         . Practice an IELTS mock test of this book now." />
+      <meta property="og:title" content="IELTS Mock Test 2020 January | IELTS Online Tests" />
+      <meta name="keywords" content="IELTS Mock Test 2020 January" />
+      <meta property="og:description" content="IELTS Mock Test 2020 January is one of the best most wanted IELTS simulation test books. Its practice tests was taken based on real, past exam papers which submitted by students and IELTS certified teachers." />
+      <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+      <meta name="MobileOptimized" content="width" />
+      <meta name="HandheldFriendly" content="true" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="content-language" content="en" />
+      <link rel="shortcut icon" href="/sites/default/files/IOTFavIcon20x20px.png" type="image/png" />
+      <link rel="alternate" hreflang="en" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january" />
+      <link rel="alternate" hreflang="zh-hans" href="https://ieltsonlinetests.com/zh-hans/collection/%E6%A8%A1%E6%8B%9F%E9%A2%98-1" />
+      <link rel="alternate" hreflang="vi" href="https://ieltsonlinetests.com/vi/collection/ielts-mock-test-2020-january" />
+      <link rel="delete-form" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/delete" />
+      <link rel="delete-multiple-form" href="https://ieltsonlinetests.com/admin/content/node/delete?node=6528436" />
+      <link rel="edit-form" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/edit" />
+      <link rel="version-history" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/revisions" />
+      <link rel="revision" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january" />
+      <link rel="drupal:content-translation-overview" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/translations" />
+      <link rel="drupal:content-translation-add" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/translations/add" />
+      <link rel="drupal:content-translation-edit" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/translations/edit" />
+      <link rel="drupal:content-translation-delete" href="https://ieltsonlinetests.com/collection/ielts-mock-test-2020-january/translations/delete" />
+      <title>IELTS Mock Test 2020 January</title>
+      <meta name="baidu-site-verification" content="mSgLLGPyqi"/>
+      <meta name="shenma-site-verification" content="c470a8a613dec0f3dd9b5d6df4836258_1523957324"/>
+      <meta name="360-site-verification" content="50c3068b67bd3e35d71ad15a43703242"/>
+      <meta name="sogou_site_verification" content="20FijwCsfE"/>
+      <meta name="msvalidate.01" content="5CBD4E42067EF2EC49331733F7BCEDE3"/>
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_tybr4zHcDirUm5gv6RlPoz20fhV3igiI6mbG0Ohp8sQ.css?q6awbf" />
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_E68sljJghXIhl2tOWkTfJOwk9wpUKx6o9QecFr42Oxc.css?q6awbf" />
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_vjINWKguaEuUvGcGrFzdgZQ_MM3Ck5CD_R3-xypw8AY.css?q6awbf" />
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_j28XPz3uy9SGt_fpAppnqtmlWAiz873z3Q-huYBX3ys.css?q6awbf" />
+      <link rel="stylesheet" media="all" href="/sites/default/files/css/css_A7vsYxzj-wfu7NVM3e9cdrMJTsQQmTbnIiteqeRLjXw.css?q6awbf" />
+      <!--[if lte IE 8]><script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script><![endif]--><script src="/sites/default/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script> <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <body class="user-logged-in path-node page-node-type-collection has-glyphicons" >
+      <div id="overlay-region" class="">&nbsp;</div>
+      <div id="overlay-menu"></div>
+      <a href="#main-content" class="visually-hidden focusable"> Skip to main content</a>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+         <div class="region region-menumobile">
+            <section id="block-menumobile" class="block block-iot-ielts block-menu-mobile clearfix">
+               <nav class="menu-res hidden-lg hidden-md">
+                  <div class="menu-res-inner">
+                     <ul>
+                        <li class="user-account"> <span class="user-avatar"> <img src="https://ieltsonlinetests.com/sites/default/files/styles/user_picture_60x60/public/pictures/2020-02/social_auth_google_100482417481361482455.jpg" alt="nagi sukhreet" width="30" height="30"> </span> <span class="user-name">nagi sukhreet</span></li>
+                        <li class="line-through"></li>
+                        <li class="profile-progress line">
+                           <p class="progress-title">80% Profile completeness</p>
+                           <div class="progress">
+                              <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width:80%"></div>
+                           </div>
+                           <a href="/account/my-profile">Complete your profile</a>
+                        </li>
+                        <li class="has-child" >
+                           <a class="has-child-link" href="/ielts-exam-library"><span>IELTS Exam Library</span> </a>
+                           <ul class="sub-menu">
+                              <li > <a href="/ielts-exam-library#academic" class=""><span>Academic Tests</span> </a></li>
+                              <li > <a href="/ielts-exam-library#general-training" class=""><span>General Training Tests </span> </a></li>
+                           </ul>
+                        </li>
+                        <li class="has-child" >
+                           <a class="has-child-link" href="/ielts-tips"><span>IELTS Tips</span> </a>
+                           <ul class="sub-menu">
+                              <li > <a href="/listening-tips" class=""><span>Listening Tips</span> </a></li>
+                              <li > <a href="/reading-tips" class=""><span>Reading Tips</span> </a></li>
+                              <li > <a href="/speaking-tips" class=""><span>Speaking Tips</span> </a></li>
+                              <li > <a href="/writing-tips" class=""><span>Writing Tips</span> </a></li>
+                              <li > <a href="/announcements" class=""><span>Announcements</span> </a></li>
+                           </ul>
+                        </li>
+                        <li class="has-child" >
+                           <a class="has-child-link" href="/ielts-premium-services"><span>IELTS Prep Services</span> </a>
+                           <ul class="sub-menu">
+                              <li > <a href="/premium-services/ielts-listening-service" class=""><span>IELTS Listening Service</span> </a></li>
+                              <li > <a href="/premium-services/ielts-reading-service" class=""><span>IELTS Reading Service</span> </a></li>
+                              <li > <a href="/writing-evaluation-service" class=""><span>Writing Evaluation</span> </a></li>
+                              <li > <a href="/ielts-premium-services/ielts-speaking-evaluation-service" class=""><span>Speaking Evaluation</span> </a></li>
+                              <li > <a href="/premium-services/ielts-test-super-pdf-pack" class=""><span>Super PDF Pack</span> </a></li>
+                              <li > <a href="/premium-services/ielts-explained-videos" class=""><span>IELTS Explained Videos</span> </a></li>
+                           </ul>
+                        </li>
+                        <li >
+                           <a class="has-child-link" href="/live-lessons/listing">
+                              <span>
+                                 Live Lessons
+                                 <h6 class="badge badge-notify">NEW</h6>
+                              </span>
+                           </a>
+                        </li>
+                        <li class="line-through"></li>
+                        <li class="top-up wallet"> <span class="wallet-val">$0.00</span> <a class="top-up" href="">Top Up Now</a></li>
+                        <li class="line-through"></li>
+                        <li><a href="https://ieltsonlinetests.com/account/my-analytics">IELTS Analytics</a></li>
+                        <li><a href="https://ieltsonlinetests.com/account/live-lessons">My live lesson</a></li>
+                        <li><a href="https://ieltsonlinetests.com/account/tests-history">Test History</a></li>
+                        <li class="line-through"></li>
+                        <li class="order-history"><a href="/order/usage/history">Order History</a></li>
+                        <li><a href="/wallet/usage/history">Wallet Usage History</a></li>
+                        <li class="line-through"></li>
+                        <li class="has-child">
+                           <a href="javascript:;"><span>My Account</span></a>
+                           <ul class="sub-menu" style="display: none;">
+                              <li class="my-profile"><a href="https://ieltsonlinetests.com/account/my-profile">- My Profile</a></li>
+                              <li class="my-interest"><a href="https://ieltsonlinetests.com/account/my-interest">- My Interest</a></li>
+                              <li class="acc-setting"><a href="https://ieltsonlinetests.com/account/account-settings">- Account Settings</a></li>
+                           </ul>
+                        </li>
+                        <li class="referral-dashboard"><a href="https://ieltsonlinetests.com/referral/dashboard">Referral</a></li>
+                        <li><a href="/user/logout">Log Out</a></li>
+                     </ul>
+                  </div>
+               </nav>
+            </section>
+         </div>
+         <header class="header">
+            <div class="container">
+               <div class="ielts-logo hidden-xs hidden-sm"> <a href="/" class="logo"> <img alt="" src="/themes/iot/images/logo.svg"> </a></div>
+               <div class="header-banner hidden-sm hidden-xs">
+                  <div class="region region-header-top-ads">
+                     <section id="block-headertopads" class="block block-block-content block-block-content4ea999bb-0a0c-41ee-a79d-23472a9301c1 clearfix">
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                           <ins data-revive-zoneid="1" data-revive-id="e7712942583e9a85ea37ea67d219291c"></ins><script async="" src="//ads.intergreat.com/www/delivery/asyncjs.php"></script>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+               <div class="header-mobile hidden-md hidden-lg">
+                  <div class="ielts-logo mobile "><a href="/"><img src="/themes/iot/images/logo_mobile.svg" alt=""></a></div>
+                  <div class="nav-icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <em>Menu</em></div>
+                  <div class="user-notifications"><a href="javascript:;"><span class="icon-notification-mb"><em class="number"></em></span></a></div>
+                  <div class="user-messengers"><a href="javascript:;"><span class="icon-messages-mb"><em class="number"></em></span></a></div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </header>
+         <div class="page exam-volume-detail">
+            <nav class="menu hidden-sm hidden-xs">
+               <div class="container">
+                  <div class="region region-menubar">
+                     <ul class="menu-main">
+                        <li>
+                           <a href="/ielts-exam-library">IELTS Exam Library <span></span></a>
+                           <div class="sub-menu">
+                              <div class="container">
+                                 <ul>
+                                    <li> <a href="/ielts-exam-library#academic" data-drupal-link-system-path="ielts-exam-library">Academic Tests</a></li>
+                                    <li> <a href="/ielts-exam-library#general-training" data-drupal-link-system-path="ielts-exam-library">General Training Tests </a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <a href="/ielts-tips">IELTS Tips <span></span></a>
+                           <div class="sub-menu">
+                              <div class="container">
+                                 <ul>
+                                    <li> <a href="/listening-tips" data-drupal-link-system-path="taxonomy/term/22">Listening Tips</a></li>
+                                    <li> <a href="/reading-tips" data-drupal-link-system-path="taxonomy/term/23">Reading Tips</a></li>
+                                    <li> <a href="/speaking-tips" data-drupal-link-system-path="taxonomy/term/26">Speaking Tips</a></li>
+                                    <li> <a href="/writing-tips" data-drupal-link-system-path="taxonomy/term/24">Writing Tips</a></li>
+                                    <li> <a href="/announcements" data-drupal-link-system-path="taxonomy/term/35">Announcements</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <a href="/ielts-premium-services">IELTS Prep Services <span></span></a>
+                           <div class="sub-menu">
+                              <div class="container">
+                                 <ul>
+                                    <li> <a href="/premium-services/ielts-listening-service" data-drupal-link-system-path="taxonomy/term/96">IELTS Listening Service</a></li>
+                                    <li> <a href="/premium-services/ielts-reading-service" data-drupal-link-system-path="taxonomy/term/97">IELTS Reading Service</a></li>
+                                    <li> <a href="/writing-evaluation-service" data-drupal-link-system-path="node/1500092">Writing Evaluation</a></li>
+                                    <li> <a href="/ielts-premium-services/ielts-speaking-evaluation-service" data-drupal-link-system-path="taxonomy/term/68">Speaking Evaluation</a></li>
+                                    <li> <a href="/premium-services/ielts-test-super-pdf-pack" data-drupal-link-system-path="taxonomy/term/67">Super PDF Pack</a></li>
+                                    <li> <a href="/premium-services/ielts-explained-videos" data-drupal-link-system-path="premium-services/ielts-explained-videos">IELTS Explained Videos</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <a href="/live-lessons/listing" data-drupal-link-system-path="live-lessons/listing">
+                              Live Lessons
+                              <h6 class="badge badge-notify">NEW</h6>
+                           </a>
+                        </li>
+                        <li class="usr-logged user-palette">
+                           <span class="user-avatar"> <img src="https://ieltsonlinetests.com/sites/default/files/styles/user_picture_60x60/public/pictures/2020-02/social_auth_google_100482417481361482455.jpg" alt="sukhreet nagi" width="30" height="30"> </span> <span class="user-name" title="sukhreet nagi">sukhreet nagi</span>
+                           <div class="user-info-wrap popover-box">
+                              <ul class="clearfix">
+                                 <li class="user-sm-box clearfix">
+                                    <img src="https://ieltsonlinetests.com/sites/default/files/styles/user_picture_60x60/public/pictures/2020-02/social_auth_google_100482417481361482455.jpg" alt="sukhreet nagi" class="user-dt-avatar">
+                                    <div class="right-if">
+                                       <div class="user-name-dt"><span class="ellipsis-text" title="sukhreet nagi">sukhreet nagi</span></div>
+                                       <div class="time-zone" data-timezone="GMT+00:00" data-timezone-offset="0"></div>
+                                    </div>
+                                 </li>
+                                 <li class="profile-progress line">
+                                    <p class="progress-title">80% Profile completeness</p>
+                                    <div class="progress">
+                                       <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width:80%"></div>
+                                    </div>
+                                    <a href="/account/my-profile">Complete your profile</a>
+                                 </li>
+                                 <li class="wallet line"> <span class="wallet-val">$0.00</span> <a href="#" class="top-up" href="">Top Up Now</a></li>
+                                 <li class="analytics"><a href="https://ieltsonlinetests.com/account/my-analytics">IELTS Analytics</a></li>
+                                 <li class="analytics"><a href="https://ieltsonlinetests.com/account/live-lessons">My live lesson</a></li>
+                                 <li class="test-history line"><a href="https://ieltsonlinetests.com/account/tests-history">Test History</a></li>
+                                 <li class="order-history"><a href="/order/usage/history">Order History</a></li>
+                                 <li class="wl-history line"><a href="/wallet/usage/history">Wallet Usage History</a></li>
+                                 <li class="my-account dropdown-submenu">
+                                    <a href="javascript:;">My Account</a>
+                                    <ul class="submenu-wp" style="display: none;">
+                                       <li class="my-profile"><a href="https://ieltsonlinetests.com/account/my-profile">- My Profile</a></li>
+                                       <li class="my-interest"><a href="https://ieltsonlinetests.com/account/my-interest">- My Interest</a></li>
+                                       <li class="acc-setting"><a href="https://ieltsonlinetests.com/account/account-settings">- Account Settings</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="referral-dashboard"><a href="https://ieltsonlinetests.com/referral/dashboard">Referral</a></li>
+                                 <li class="log-out"><a href="/user/logout">Log Out</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="usr-logged user-notification">
+                           <a href="javascript:;"> <span class="icon-notification"> <em class="number"></em> </span> </a>
+                           <div class="user-notification-wrap popover-box">
+                              <ul class="clearfix unread-notification"></ul>
+                              <ul class="clearfix">
+                                 <li class="view-old-notice"> <a href="/account/notifications">View Older Notifications</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="usr-logged user-messages">
+                           <a href="javascript:;"> <span class="icon-messages private-message-notification-wrapper"> <em class="number private-message-page-link">0</em> </span> </a>
+                           <div class="user-messages-wrap popover-box">
+                              <ul class="clearfix unread-messages"></ul>
+                              <ul class="clearfix">
+                                 <li class="view-all-message"> <a href="/account/messages">View All Messages</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 col-sm-12 col-xs-12 cl-left">
+                     <div class="sitemap"> <a href="/">Home</a> <span>/</span> <a href="/ielts-exam-library">Collections</a> <span>/</span> <a href="/collection/ielts-mock-test-2020-january">IELTS Mock Test 2020 January</a></div>
+                     <div class="js-volume-slider owl-carousel owl-theme">
+                        <div class="volume-item active">
+                           <a href="/collection/ielts-mock-test-2020-january">
+                              <div class="volume-name">January <span></span></div>
+                              <div class="volume-star">3.6<i class="fa fa-star" aria-hidden="true"></i></div>
+                              <div class="volume-vote">(165 votes)</div>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="test-hero clearfix">
+                        <div class="book-img-wrap" > <img alt="" src="/sites/default/files/styles/latest_collection/public/2020-01/MTjan2020%403x.png"></div>
+                        <div class="right-panel" >
+                           <h1 class="test-caption lesson-title">IELTS Mock Test 2020 January</h1>
+                           <div class="test-vote">
+                              <div id="rate-node-6528436" class="rate-widget-fivestar">
+                                 <div class="item-list test-vote">
+                                    <div class="star-rating" title="72%">
+                                       <span class="rating-point">3.6</span>
+                                       <div class="back-stars">
+                                          <a class=" rate-fivestar-1 use-ajax fa fa-star-o" href="/rate/node/6528436/fivestar/1?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-2 use-ajax fa fa-star-o" href="/rate/node/6528436/fivestar/2?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-3 use-ajax fa fa-star-o" href="/rate/node/6528436/fivestar/3?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-4 use-ajax fa fa-star-o" href="/rate/node/6528436/fivestar/4?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-5 use-ajax fa fa-star-o" href="/rate/node/6528436/fivestar/5?destination=/collection/ielts-mock-test-2020-january"></a>
+                                          <div class="front-stars" style="width: 72%"> <a class=" rate-fivestar-1 use-ajax fa fa-star" href="/rate/node/6528436/fivestar/1?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-2 use-ajax fa fa-star" href="/rate/node/6528436/fivestar/2?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-3 use-ajax fa fa-star" href="/rate/node/6528436/fivestar/3?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-4 use-ajax fa fa-star" href="/rate/node/6528436/fivestar/4?destination=/collection/ielts-mock-test-2020-january"></a> <a class=" rate-fivestar-5 use-ajax fa fa-star" href="/rate/node/6528436/fivestar/5?destination=/collection/ielts-mock-test-2020-january"></a></div>
+                                       </div>
+                                       <em>(165 votes)</em>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="test-des">
+                              <p><span class="icon-ts icon-calendar"></span> Published on: 08 Feb 2020</p>
+                              <p style="font-weight:700;"><span class="icon-ts icon-view"></span> Views: 112,096</p>
+                              <p style="font-weight:700;"><span class="icon-ts icon-taken"></span> Tests Taken: 35,335</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="region region-content">
+                        <div data-drupal-messages-fallback class="hidden"></div>
+                        <article data-history-node-id="6528436" role="article" about="/collection/ielts-mock-test-2020-january" class="collection is-promoted is-sticky full clearfix">
+                           <div class="practice-module">
+                              <div class="divTable practice-table">
+                                 <div class="divTableBody">
+                                    <div class="divTableRow head-row">
+                                       <div class="divTableCell">Practice Modules</div>
+                                       <div class="divTableCell">
+                                          <img src="/themes/iot/images/listening-icon.svg" alt="">
+                                          <div class="practice-type aqua">Listening</div>
+                                       </div>
+                                       <div class="divTableCell">
+                                          <img src="/themes/iot/images/reading-icon.svg" alt="">
+                                          <div class="practice-type green">Reading</div>
+                                       </div>
+                                       <div class="divTableCell">
+                                          <img src="/themes/iot/images/writing-icon.svg" alt="">
+                                          <div class="practice-type orange">Writing</div>
+                                       </div>
+                                       <div class="divTableCell">
+                                          <img src="/themes/iot/images/speaking-icon.svg" alt="">
+                                          <div class="practice-type pink">Speaking</div>
+                                       </div>
+                                    </div>
+                                    <div class="divTableRow">
+                                       <div class="divTableCell first-col">Practice test 1</div>
+                                       <div class="divTableCell aqua"> <a href="/ielts-mock-test-2020-january-listening-practice-test-1" class="btn-test ">Take Test</a> <a href="/ielts-mock-test-2020-january-listening-practice-test-1/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell green"> <a href="/ielts-mock-test-2020-january-reading-practice-test-1" class="btn-test ">Take Test</a> <a href="/ielts-mock-test-2020-january-reading-practice-test-1/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell orange"> <a href="/ielts-mock-test-2020-january-writing-practice-test-1" class="btn-test">Take Test</a> <a href="/ielts-mock-test-2020-january-writing-practice-test-1/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell pink"> <a href="/ielts-mock-test-2020-january-speaking-practice-test-1" class="btn-test">Take Test</a></div>
+                                    </div>
+                                    <div class="divTableRow">
+                                       <div class="divTableCell first-col">Practice test 2</div>
+                                       <div class="divTableCell aqua"> <a href="/ielts-mock-test-2020-january-listening-practice-test-2" class="btn-test ">Take Test</a> <a href="/ielts-mock-test-2020-january-listening-practice-test-2/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell green"> <a href="/ielts-mock-test-2020-january-reading-practice-test-2" class="btn-test ">Take Test</a> <a href="/ielts-mock-test-2020-january-reading-practice-test-2/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell orange"> <a href="/ielts-practice-test-volume-9-writing-practice-test-2" class="btn-test">Take Test</a> <a href="/ielts-practice-test-volume-9-writing-practice-test-2/solution" class="btn-view">View Solution</a></div>
+                                       <div class="divTableCell pink"> <a href="/ielts-mock-test-2020-january-speaking-practice-test-2" class="btn-test">Take Test</a></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="comments">
+                              <div class="box-caption box-caption-margin">
+                                 <h3 class="comment-head-title">Comments:</h3>
+                              </div>
+                              <section id="isso-thread"></section>
+                              <div id="hashover"></div>
+                              <script type="text/javascript" src="/hashover/comments.php?url="></script><input type="hidden" value="sukhpreetn@gmail.com" id="user_mail"> <input type="hidden" value="sukhpreetnagi" id="user_name">
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-12 col-xs-12 cl-right">
+                     <div class="colright hidden-sm hidden-xs">
+                        <div class="region region-sidebar-right">
+                           <section id="block-ads300x600" class="block block-block-content block-block-content190a98a6-20be-41cb-a59d-f08c2aa42922 clearfix">
+                              <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                 <ins data-revive-zoneid="3" data-revive-id="e7712942583e9a85ea37ea67d219291c"></ins><script async="" src="//ads.intergreat.com/www/delivery/asyncjs.php"></script>
+                              </div>
+                           </section>
+                           <section class="views-element-container block block-views block-views-blockrecent-tips-block-1 clearfix" id="block-views-block-recent-tips-block-1">
+                              <div class="form-group">
+                                 <div class="view view-recent-tips view-id-recent_tips view-display-id-block_1 js-view-dom-id-e392916e1a8759840820c55d941679314a7f57a95f1be8148f827db60ab9a3d6">
+                                    <div class="view-content">
+                                       <div class="box-tag">
+                                          <div class="box-caption box-caption-margin">
+                                             <p>Most viewed IELTS tips</p>
+                                          </div>
+                                          <div class="mostview-item">
+                                             <a href="/speaking-recent-actual-tests/latest-ielts-speaking-topics-2018" hreflang="en"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="200" height="113" alt="" data-src="https://iotcdn.oss-ap-southeast-1.aliyuncs.com/styles/recent_tips/oss/2018-02/rs5696_75288099-low.jpg" class="b-lazy img-responsive" typeof="foaf:Image" /></a>
+                                             <h3><a href="/speaking-recent-actual-tests/latest-ielts-speaking-topics-2018" hreflang="en">Latest IELTS Speaking topics in 2018</a></h3>
+                                             <p>Check out Sample Answers by IELTS test takers for a recent IELTS speaking...</p>
+                                             <span class="mi-tag"><em></em> <a href="/speaking-recent-actual-tests" hreflang="en">Speaking Recent Actual Tests</a></span><span class="mi-view"><em></em>213276 </span>
+                                             <div class="clearfix"></div>
+                                          </div>
+                                          <div class="mostview-item">
+                                             <a href="/recent-actual-tests/how-improve-ielts-score-65-7" hreflang="en"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="200" height="133" alt="" data-src="https://iotcdn.oss-ap-southeast-1.aliyuncs.com/styles/recent_tips/oss/2018-06/ielts_6-5_to_7.jpg" class="b-lazy img-responsive" typeof="foaf:Image" /></a>
+                                             <h3><a href="/recent-actual-tests/how-improve-ielts-score-65-7" hreflang="en">How to improve IELTS score from 6.5 to 7</a></h3>
+                                             <p>A requirement of scoring Band 7 or above overalll, and no less than 7 in...</p>
+                                             <span class="mi-tag"><em></em> <a href="/recent-actual-tests" hreflang="en">Recent Actual Tests</a></span><span class="mi-view"><em></em>124701 </span>
+                                             <div class="clearfix"></div>
+                                          </div>
+                                          <div class="mostview-item">
+                                             <a href="/recent-actual-tests/ielts-prediction-jan-april-2019" hreflang="en"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="200" height="200" alt="" data-src="https://iotcdn.oss-ap-southeast-1.aliyuncs.com/styles/recent_tips/oss/2018-03/IELTS-Prediction.png" class="b-lazy img-responsive" typeof="foaf:Image" /></a>
+                                             <h3><a href="/recent-actual-tests/ielts-prediction-jan-april-2019" hreflang="en">IELTS Prediction in Jan-April 2019</a></h3>
+                                             <p>To be well-prepared for the IELTS test (both IELTS Academic &amp; IELTS General...</p>
+                                             <span class="mi-tag"><em></em> <a href="/recent-actual-tests" hreflang="en">Recent Actual Tests</a></span><span class="mi-view"><em></em>116114 </span>
+                                             <div class="clearfix"></div>
+                                          </div>
+                                          <div class="mostview-item">
+                                             <a href="/speaking-tips/recent-ielts-speaking-topic-and-sample-answer-tv-programme" hreflang="en"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="200" height="132" data-src="https://iotcdn.oss-ap-southeast-1.aliyuncs.com/styles/recent_tips/oss/tv%20programme.jpg" class="b-lazy img-responsive" typeof="foaf:Image" /></a>
+                                             <h3><a href="/speaking-tips/recent-ielts-speaking-topic-and-sample-answer-tv-programme" hreflang="en">Recent IELTS Speaking Topic and Sample Answer – TV Programme</a></h3>
+                                             <p> 
+                                                Checking out the latest exam question will let you test your preparation...
+                                             </p>
+                                             <span class="mi-tag"><em></em> <a href="/speaking-tips" hreflang="en">Speaking Tips</a></span><span class="mi-view"><em></em>98926 </span>
+                                             <div class="clearfix"></div>
+                                          </div>
+                                          <div class="mostview-item">
+                                             <a href="/speaking-recent-actual-tests/ielts-speaking-task-part-ii-sample-questions-answers" hreflang="en"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="200" height="134" alt="" data-src="https://iotcdn.oss-ap-southeast-1.aliyuncs.com/styles/recent_tips/oss/2018-06/Ielts_speaking_part2_answers.jpg" class="b-lazy img-responsive" typeof="foaf:Image" /></a>
+                                             <h3><a href="/speaking-recent-actual-tests/ielts-speaking-task-part-ii-sample-questions-answers" hreflang="en">IELTS Speaking task Part II - Sample Questions with Answers</a></h3>
+                                             <p> 
+                                                IELTS Speaking Sample Part 2
+                                                Question:
+                                                Discuss the meaning...
+                                             </p>
+                                             <span class="mi-tag"><em></em> <a href="/speaking-recent-actual-tests" hreflang="en">Speaking Recent Actual Tests</a></span><span class="mi-view"><em></em>87661 </span>
+                                             <div class="clearfix"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </section>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="footer " role="contentinfo">
+            <div class="region region-footer">
+               <section id="block-footerbar" class="block block-iot-ielts block-footerbar clearfix"> </section>
+               <section class="simplenews-subscriptions-block-778e14d0-0773-41ff-a7a1-c9f0859437ba simplenews-subscriber-form block block-simplenews block-simplenews-subscription-block clearfix" data-drupal-selector="simplenews-subscriptions-block-778e14d0-0773-41ff-a7a1-c9f0859437ba" id="block-simplenewssubscription">
+                  <form action="/collection/ielts-mock-test-2020-january" method="post" id="simplenews-subscriptions-block-778e14d0-0773-41ff-a7a1-c9f0859437ba" accept-charset="UTF-8">
+                     <div class="field--type-simplenews-subscription field--name-subscriptions field--widget-simplenews-subscription-select form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-subscriptions-wrapper" id="edit-subscriptions-wrapper"></div>
+                     <div id="edit-message" class="form-item js-form-item form-type-item js-form-type-item form-item-message js-form-item-message form-no-label form-group"> Stay informed - subscribe to our newsletter.</div>
+                     <input autocomplete="off" data-drupal-selector="form-pdyamrwqa97wdt07f2wbgfhkuagoegnnamzzkmxpe9c" type="hidden" name="form_build_id" value="form-PDyaMrwqa97wDt07F2WBgFHKuAgOEgnnAmzzkmXpe9c" /><input data-drupal-selector="edit-simplenews-subscriptions-block-778e14d0-0773-41ff-a7a1-c9f0859437ba-form-token" class="form-control" type="hidden" name="form_token" value="J-RlL7G1wLEPMAX4D4xc1WEzDfcAjrRwVuXsSutl064" /><input data-drupal-selector="edit-simplenews-subscriptions-block-778e14d0-0773-41ff-a7a1-c9f0859437ba" type="hidden" name="form_id" value="simplenews_subscriptions_block_778e14d0-0773-41ff-a7a1-c9f0859437ba" />
+                     <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-subscribe" class="button js-form-submit form-submit btn-default btn" type="submit" id="edit-subscribe" name="op" value="Subscribe">Subscribe</button></div>
+                  </form>
+               </section>
+               <div class="footer-content">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                           <div class="box-about">
+                              <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                 <h3>About us</h3>
+                                 <p>IELTS Online Tests is the largest global community of students, teachers, examiners, institutions and IELTS training centres, and is currently the #1 website for online IELTS  practice.  We are a community-driven website with free real IELTS exams, IELTS tips and numerous innovative features to make IELTS online testing easier, helping students improve their IELTS scores online.</p>
+                              </div>
+                           </div>
+                           <div class="follow-box"> <span>Follow us: </span> <a href="https://www.facebook.com/ieltsonlinetests/" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://www.youtube.com/intergreateducationgroup/" target="_blank"><i class="fa fa-youtube"></i></a></div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-right">
+                           <ul class="menu-footer footer-menu">
+                              <li> <a href="/contact-us" data-drupal-link-system-path="contact-us">Contact Us</a></li>
+                              <li> <a href="/privacy-policy" data-drupal-link-system-path="node/4350">Privacy Policy</a></li>
+                              <li> <a href="/sitemap" data-drupal-link-system-path="sitemap">Site Map</a></li>
+                              <li> <a href="/terms-and-conditions" data-drupal-link-system-path="node/4351">Terms &amp; Conditions</a></li>
+                           </ul>
+                           <select class="currency-selectpicker" data-user="1">
+                              <option value="USD" selected="selected">USD $</option>
+                              <option value="AED">AED د.إ.‏</option>
+                              <option value="AFN">AFN ؋</option>
+                              <option value="ALL">ALL Lek</option>
+                              <option value="AMD">AMD</option>
+                              <option value="ANG">ANG ƒ</option>
+                              <option value="AOA">AOA</option>
+                              <option value="ARS">ARS $</option>
+                              <option value="AUD">AUD $</option>
+                              <option value="AWG">AWG ƒ</option>
+                              <option value="AZN">AZN ₼</option>
+                              <option value="BAM">BAM KM</option>
+                              <option value="BBD">BBD $</option>
+                              <option value="BDT">BDT</option>
+                              <option value="BGN">BGN лв</option>
+                              <option value="BHD">BHD</option>
+                              <option value="BIF">BIF</option>
+                              <option value="BMD">BMD $</option>
+                              <option value="BND">BND $</option>
+                              <option value="BOB">BOB $b</option>
+                              <option value="BRL">BRL R$</option>
+                              <option value="BSD">BSD $</option>
+                              <option value="BTN">BTN</option>
+                              <option value="BWP">BWP P</option>
+                              <option value="BYN">BYN Br</option>
+                              <option value="BZD">BZD BZ$</option>
+                              <option value="CAD">CAD $</option>
+                              <option value="CDF">CDF</option>
+                              <option value="CHF">CHF CHF</option>
+                              <option value="CLP">CLP $</option>
+                              <option value="COP">COP $</option>
+                              <option value="CRC">CRC ₡</option>
+                              <option value="CUC">CUC</option>
+                              <option value="CVE">CVE</option>
+                              <option value="CZK">CZK Kč</option>
+                              <option value="DJF">DJF</option>
+                              <option value="DKK">DKK kr</option>
+                              <option value="DOP">DOP RD$</option>
+                              <option value="DZD">DZD</option>
+                              <option value="EGP">EGP £</option>
+                              <option value="ERN">ERN</option>
+                              <option value="ETB">ETB</option>
+                              <option value="EUR">EUR €</option>
+                              <option value="FJD">FJD $</option>
+                              <option value="FKP">FKP £</option>
+                              <option value="GBP">GBP £</option>
+                              <option value="GEL">GEL</option>
+                              <option value="GHS">GHS ¢</option>
+                              <option value="GIP">GIP £</option>
+                              <option value="GMD">GMD</option>
+                              <option value="GNF">GNF</option>
+                              <option value="GTQ">GTQ Q</option>
+                              <option value="GYD">GYD $</option>
+                              <option value="HKD">HKD $</option>
+                              <option value="HNL">HNL L</option>
+                              <option value="HRK">HRK kn</option>
+                              <option value="HTG">HTG</option>
+                              <option value="HUF">HUF Ft</option>
+                              <option value="IDR">IDR Rp</option>
+                              <option value="ILS">ILS ₪</option>
+                              <option value="INR">INR</option>
+                              <option value="IQD">IQD</option>
+                              <option value="IRR">IRR ﷼</option>
+                              <option value="ISK">ISK kr</option>
+                              <option value="JMD">JMD J$</option>
+                              <option value="JOD">JOD</option>
+                              <option value="JPY">JPY ¥</option>
+                              <option value="KES">KES</option>
+                              <option value="KGS">KGS лв</option>
+                              <option value="KHR">KHR ៛</option>
+                              <option value="KMF">KMF</option>
+                              <option value="KPW">KPW ₩</option>
+                              <option value="KRW">KRW ₩</option>
+                              <option value="KWD">KWD</option>
+                              <option value="KYD">KYD $</option>
+                              <option value="KZT">KZT лв</option>
+                              <option value="LAK">LAK ₭</option>
+                              <option value="LBP">LBP £</option>
+                              <option value="LKR">LKR ₨</option>
+                              <option value="LRD">LRD $</option>
+                              <option value="LSL">LSL</option>
+                              <option value="LYD">LYD</option>
+                              <option value="MAD">MAD</option>
+                              <option value="MDL">MDL</option>
+                              <option value="MGA">MGA</option>
+                              <option value="MKD">MKD ден</option>
+                              <option value="MMK">MMK</option>
+                              <option value="MNT">MNT ₮</option>
+                              <option value="MOP">MOP</option>
+                              <option value="MRO">MRO</option>
+                              <option value="MUR">MUR ₨</option>
+                              <option value="MVR">MVR</option>
+                              <option value="MWK">MWK</option>
+                              <option value="MXN">MXN $</option>
+                              <option value="MYR">MYR RM</option>
+                              <option value="MZN">MZN MT</option>
+                              <option value="NAD">NAD $</option>
+                              <option value="NGN">NGN ₦</option>
+                              <option value="NIO">NIO C$</option>
+                              <option value="NOK">NOK kr</option>
+                              <option value="NPR">NPR ₨</option>
+                              <option value="NZD">NZD $</option>
+                              <option value="OMR">OMR ﷼</option>
+                              <option value="PAB">PAB B/.</option>
+                              <option value="PEN">PEN S/.</option>
+                              <option value="PGK">PGK</option>
+                              <option value="PHP">PHP ₱</option>
+                              <option value="PKR">PKR ₨</option>
+                              <option value="PLN">PLN zł</option>
+                              <option value="PYG">PYG Gs</option>
+                              <option value="QAR">QAR ﷼</option>
+                              <option value="CNY">RMB ¥</option>
+                              <option value="RON">RON lei</option>
+                              <option value="RSD">RSD Дин.</option>
+                              <option value="RUB">RUB ₽</option>
+                              <option value="RWF">RWF</option>
+                              <option value="SAR">SAR ﷼</option>
+                              <option value="SBD">SBD $</option>
+                              <option value="SCR">SCR ₨</option>
+                              <option value="SDG">SDG</option>
+                              <option value="SEK">SEK kr</option>
+                              <option value="SHP">SHP £</option>
+                              <option value="SLL">SLL</option>
+                              <option value="SOS">SOS S</option>
+                              <option value="SRD">SRD $</option>
+                              <option value="SSP">SSP</option>
+                              <option value="STD">STD</option>
+                              <option value="SYP">SYP £</option>
+                              <option value="SZL">SZL</option>
+                              <option value="THB">THB ฿</option>
+                              <option value="TJS">TJS</option>
+                              <option value="TMT">TMT</option>
+                              <option value="TND">TND</option>
+                              <option value="TOP">TOP</option>
+                              <option value="TRY">TRY</option>
+                              <option value="TTD">TTD TT$</option>
+                              <option value="TWD">TWD NT$</option>
+                              <option value="TZS">TZS</option>
+                              <option value="UAH">UAH ₴</option>
+                              <option value="UGX">UGX</option>
+                              <option value="UYU">UYU $U</option>
+                              <option value="UZS">UZS лв</option>
+                              <option value="VEF">VEF Bs</option>
+                              <option value="VND">VND ₫</option>
+                              <option value="VUV">VUV</option>
+                              <option value="WST">WST</option>
+                              <option value="XAF">XAF</option>
+                              <option value="XCD">XCD $</option>
+                              <option value="XOF">XOF</option>
+                              <option value="XPF">XPF</option>
+                              <option value="YER">YER ﷼</option>
+                              <option value="ZAR">ZAR R</option>
+                              <option value="ZMW">ZMW</option>
+                           </select>
+                           <select class="language-selectpicker" id="iot-language-switcher">
+                              <option value="vi" data-href="/vi">Vietnamese</option>
+                              <option value="zh-hans" data-href="/zh-hans">Chinese</option>
+                              <option value="en" data-href="/">English</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="f-bottom">
+                        <div class="row">
+                           <div class="col-md-8 col-sm-12">
+                              <div class="copy-right">
+                                 <p class="allright">2020 IeltsOnlineTests. All Rights Reserved</p>
+                                 <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                    <p>IELTS is a registered trademark of University of Cambridge, the British Council, and IDP Education Australia. This site and its owners are not affiliated, approved or endorsed by the University of Cambridge ESOL, the British Council, and IDP Education Australia.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-12 col-md-12">
+                              <p class="text-center icp"><strong><a href="http://www.miitbeian.gov.cn">沪ICP备16020833号-9</a></strong></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <div class="region region-footer-hidden">
+         <section id="block-profile" class="block block-iot-ielts block-profile clearfix">
+            <div id="build_profile_tpl"></div>
+            <a class="click-profile-build" href="/account/build/profile?destination=/collection/ielts-practice-test-volume-1"></a> 
+         </section>
+         <section id="block-contactmessage" class="block block-iot-ielts block-contactmessage clearfix">
+            <div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-profile">
+                  <div class="">
+                     <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                     <h2 class="modal-caption">Thank you</h2>
+                     <div class="login-box">
+                        <p style="text-align: center"> Thank you for contacting us, we will get back within 48 hours.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-profile">
+                  <div class="">
+                     <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                     <div class="login-box">
+                        <p style="text-align: center"> You have subscribed successfully.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-profile">
+                  <div class="">
+                     <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                     <div class="login-box">
+                        <p style="text-align: center;padding-top: 50px"> Thank you for your feedback, we will investigate and resolve the issue within 48 hours.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="modal-draft" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-profile">
+                  <div class="">
+                     <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                     <div class="login-box">
+                        <p style="text-align: center;padding-top: 50px"> Your answers has been saved successfully.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="block-termsprivacyblock" class="block block-iot-profile block-terms-privacy-block clearfix">
+            <div class="modal fade" id="modal-term" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-term">
+                  <form action="#" method="post">
+                     <div class="modal-content-wp">
+                        <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                        <div class="clearfix term-wrap">
+                           <h2>Terms and Conditions</h2>
+                           <div class="term-content">
+                              <h2>Terms and Conditions</h2>
+                              <p>Last updated: April 30, 2016</p>
+                              <p>Please read these Terms and Conditions (“Terms”, “Terms and Conditions”) carefully before using the https://ieltsonlinetests.com website (the “Service”) operated by&nbsp;<a href="https://ieltsonlinetests.com/">IELTS Online Tests</a>&nbsp;(“us”, “we”, or “our”).</p>
+                              <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+                              <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+                              <p><strong>Accounts</strong></p>
+                              <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
+                              <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.</p>
+                              <p>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                              <p><strong>Links To Other Web Sites</strong></p>
+                              <p>Our Service may contain links to third-party websites or services that are not owned or controlled by IELTS Online Tests.</p>
+                              <p>IELTS Online Tests has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. You further acknowledge and agree that IELTS Online Tests shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such websites or services.</p>
+                              <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p>
+                              <p><strong>Termination</strong></p>
+                              <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                              <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+                              <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                              <p>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service.</p>
+                              <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+                              <p><strong>Governing Law</strong></p>
+                              <p>These Terms shall be governed and construed in accordance with English Law and the exclusive jurisdiction of the courts of England and Wales, without regard to its conflict of law provisions.</p>
+                              <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+                              <p><strong>Changes</strong></p>
+                              <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                              <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+                              <p><strong>User Submitted Content</strong></p>
+                              <p>IELTS Online Tests users may post, upload, and/or contribute (“post”) content to the Service (which may include, for example, pictures, text, messages, information, playlist compilations, and/or other types of content) (“User Content”). For the avoidance of doubt, “User Content” includes any such content posted to the IELTS Online Tests Support Community as well as any other part of the IELTS Online Tests Service.</p>
+                              <p>You promise that, with respect to any User Content you post on IELTS Online Tests, (1) you have the right to post such User Content, and (2) such User Content, or its use by IELTS Online Tests as contemplated by the Agreements, does not violate the Agreements, applicable law, or the intellectual property (including without limitation copyright), publicity, personality, or other rights of others or imply any affiliation with or endorsement of you or your User Content by IELTS Online Tests or any artist, band, label, entity or individual without express written consent from such individual or entity.</p>
+                              <p>IELTS Online Tests may, but has no obligation to, monitor, review, or edit User Content. In all cases, IELTS Online Tests reserves the right to remove or disable access to any User Content for any or no reason, including but not limited to, User Content that, in IELTS Online Tests’ sole discretion, violates the Agreements. IELTS Online Tests may take these actions without prior notification to you or any third party. Removal or disabling of access to User Content shall be at our sole discretion, and we do not promise to remove or disable access to any specific User Content.</p>
+                              <p>You are solely responsible for all User Content that you post. IELTS Online Tests is not responsible for User Content nor does it endorse any opinion contained in any User Content. YOU AGREE THAT IF ANYONE BRINGS A CLAIM AGAINST IELTS Online Tests RELATED TO USER CONTENT THAT YOU POST, THEN, TO THE EXTENT PERMISSIBLE UNDER LOCAL LAW, YOU WILL INDEMNIFY AND HOLD IELTS Online Tests HARMLESS FROM AND AGAINST ALL DAMAGES, LOSSES, AND EXPENSES OF ANY KIND (INCLUDING REASONABLE ATTORNEY FEES AND COSTS) ARISING OUT OF SUCH CLAIM.</p>
+                              <p><strong>Takedown requests </strong></p>
+                              <p>We will respond to legitimate takedown requests and we retain the right to remove user content on the website that we deem to be infringing the copyright of others. If you become aware of user content on IELTS Online Tests that infringes your copyright rights, you may submit a properly formatted takedown request (see below).</p>
+                              <p>The electronic or physical signature of the owner of the copyright or the person authorised to act on the owner's behalf; identification of the copyrighted work claimed to have been infringed, or a representative list of such works; the URL or Internet location of the materials claimed to be infringing or to be the subject of infringing activity, or information reasonably sufficient to permit us to locate the material; your name, address, telephone number and email address; a statement by you that you have a good faith belief that the disputed use of the material is not authorised by the copyright owner, its agent or the law; and a statement by you, that the above information in your notice is accurate and that you are the copyright owner or are authorised to act on the copyright owner's behalf.</p>
+                              <p><strong>Contact Us</strong></p>
+                              <p>If you have any questions about these Terms, please contact us.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class="modal fade" id="modal-privacy" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-privacy">
+                  <form action="#" method="post">
+                     <div class="modal-content-wp">
+                        <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                        <div class="clearfix term-wrap">
+                           <h2>Privacy Policy</h2>
+                           <div class="term-content">
+                              <h2>Privacy</h2>
+                              <p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by using contact button at the bottom of the page.</p>
+                              <p>At https://ieltsonlinetests.com we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by https://ieltsonlinetests.com and how we use it.</p>
+                              <p><b>Log Files</b><br />Like many other Web sites, https://ieltsonlinetests.com makes use of log files. These files merely logs visitors to the site – usually a standard procedure for hosting companies and a part of hosting services’s analytics. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. This information is used to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
+                              <p><b>Cookies and Web Beacons</b><br />https://ieltsonlinetests.com uses cookies to store information about visitors’ preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors’ browser type or other information that the visitor sends via their browser.</p>
+                              <h3><b>DoubleClick DART Cookie</b></h3>
+                              <p>→ Google, as a third party vendor, uses cookies to serve ads on https://ieltsonlinetests.com.<br />→ Google’s use of the DART cookie enables it to serve ads to our site’s visitors based upon their visit to https://ieltsonlinetests.com and other sites on the Internet.&nbsp;<br />→ Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL –&nbsp;<a href="http://www.google.com/privacy_ads.html" title="Opt out of the Dart Cookie">http://www.google.com/privacy_ads.html</a></p>
+                              <h3><b>Our Advertising Partners</b></h3>
+                              <p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include …….</p>
+                              <ul>
+                                 <li>Google</li>
+                              </ul>
+                              <p><em>While each of these advertising partners has their own Privacy Policy for their site, an updated and hyperlinked resource is maintained here:&nbsp;<a href="http://www.privacypolicyonline.com/privacy-policies">Privacy Policies</a>.<br />You may consult this listing to find the privacy policy for each of the advertising partners of https://ieltsonlinetests.com.</em></p>
+                              <p>These third-party ad servers or ad networks use technology in their respective advertisements and links that appear on https://ieltsonlinetests.com and which are sent directly to your browser. They automatically receive your IP address when this occurs. Other technologies (such as cookies, JavaScript, or Web Beacons) may also be used by our site’s third-party ad networks to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on the site.</p>
+                              <p>https://ieltsonlinetests.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+                              <h3><b>Third Party Privacy Policies</b></h3>
+                              <p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. https://ieltsonlinetests.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites. You may find a comprehensive listing of these privacy policies and their links here:&nbsp;<a href="http://www.privacypolicyonline.com/privacy-policy-links" title="Privacy Policy Links">Privacy Policy Links</a>.</p>
+                              <p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.&nbsp;<a href="http://www.privacypolicyonline.com/what-are-cookies">What Are Cookies?</a></p>
+                              <p><strong>Children’s Information</strong><br />We believe it is important to provide added protection for children online. We encourage parents and guardians to spend time online with their children to observe, participate in and/or monitor and guide their online activity. https://ieltsonlinetests.com does not knowingly collect any personally identifiable information from children under the age of 13. If a parent or guardian believes that https://ieltsonlinetests.com has in its database the personally-identifiable information of a child under the age of 13, please contact us immediately (using the contact in the first paragraph) and we will use our best efforts to promptly remove such information from our records.</p>
+                              <p><b>Online Privacy Policy Only</b><br />This privacy policy applies only to our online activities and is valid for visitors to our website and regarding information shared and/or collected there. This policy does not apply to any information collected offline or via channels other than this website.</p>
+                              <p><b>Consent</b><br />By using our website, you hereby consent to our privacy policy and agree to its terms.</p>
+                              <p><b>Update</b><br />This Privacy Policy was last updated on: Wednesday, January 6th, 2016.<br /><em>Should we update, amend or make any changes to our privacy policy, those changes will be posted here.</em></p>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <section id="block-topupmodalblock" class="block block-iot-commerce block-topup-modal-block clearfix">
+            <div class="modal fade" id="modal-add-credit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-add-credit">
+                  <form action="/iot/checkout/credits" method="get" id="topup_credit">
+                     <div class="modal-content-wp">
+                        <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                        <div class="clearfix credit-wrap">
+                           <div class="md-col-left">
+                              <h3>Add Credits</h3>
+                              <div class="annotate"> How many IOT Credits do you want to buy?</div>
+                              <div class="credit-board">
+                                 <div class="minus-value action-bt" ondragover="return false"></div>
+                                 <div class="current-value"><span class="symbol" id="dollar-symbol">$</span> <input type="text" id="dollar-value" value="100" name="amount" autocomplete="Off"></div>
+                                 <div class="plus-value action-bt" ondragover="return false"></div>
+                              </div>
+                           </div>
+                           <div class="md-col-right">
+                              <h5>Your Order</h5>
+                              <div class="credit-title">IOT Credits</div>
+                              <div class="iot-credit"> <span class="symbol">$</span><span class="value">10</span></div>
+                              <a href="#" class="btn-checkout">Go To Checkout</a>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <section id="block-topupmoremodalblock" class="block block-iot-commerce block-topup-more-modal-block clearfix">
+            <div class="modal fade" id="modal-insu-credit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+               <div class="modal-dialog modal-auto modal-insu-credit">
+                  <form action="#" method="post">
+                     <div class="modal-content-wp">
+                        <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                        <div class="clearfix credit-wrap">
+                           <h2>You do not have enough IOT Credits</h2>
+                           <input type="hidden" class="amount-more" value=""/> <input type="hidden" class="rem-more" value=""/>
+                           <p class="desc">Your account does not have enough IOT Credits to complete the order. Please purchase IOT Credits to continue.</p>
+                           <a href="javascript:;" class="iot-bt buymore">Buy More IOT Credits</a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </div>
+      </div>
+      <div class="notifi-popup-mobile">
+         <div class="container">
+            <div class="notifications-popup-wp">
+               <div class="close-button" id="notification-closebt"></div>
+               <div class="title"><span>Notifications</span></div>
+               <div class="nav nav-tabs" id="notification-tabs"></div>
+               <div class="tab-content">
+                  <div class="table-order-content tab-pane fade" id="order-id1">
+                     <form action="" method="POST" role="form">
+                        <div class="order-title"></div>
+                        <div class="time"></div>
+                        <div class="container-mess-order"></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="messages-popup-mobile">
+         <div class="container">
+            <div class="messages-popup-wp">
+               <div class="users-column">
+                  <div class="close-button" id="messages-closebt"></div>
+                  <div class="mes-title-top"><span>Messages</span></div>
+                  <div class="nav nav-tabs" id="messages-tabs">
+                     <form role="form" class="user-search" id="mobile-user-search">
+                        <div class="form-group"> <input type="text" class="form-control" id="" placeholder="Search…"></div>
+                        <button type="submit" class="btn btn-primary"><img src="/themes/iot/images/icon_search.png" alt=""></button>
+                     </form>
+                     <div id="mobile-threads"></div>
+                  </div>
+               </div>
+               <div class="tab-content">
+                  <div class="table-chat-content tab-pane fade clearfix" id="user-id1">
+                     <div class="partner-mess-name"></div>
+                     <div class="mess-container-detail"></div>
+                     <div class="write-message">
+                        <form id="mobile-chat-form" role="form"><textarea class="form-control" rows="5" name="message" placeholder="Write a message…"></textarea><button type="submit" class="btn btn-primary"></button></form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="modal-qrcode" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+         <div class="modal-dialog modal-auto modal-qrcode">
+            <div class="modal-content-wp">
+               <i class="ion-android-close close-modal"></i>
+               <div class="clearfix qrcode-content">
+                  <div class="qrcode-image-wrap"> <img src="/themes/iot/images/qr-wechat.jpg" alt="" class="qr-image"> <img src="/themes/iot/images/hand.svg" alt="" class="hand"></div>
+                  <div class="desc">
+                     <p>小手一抖 真题到手</p>
+                     <p class="slash">/</p>
+                     <p>随时随地 想练就练</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6528436","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"bootstrap\/popover,bootstrap\/tooltip,ckeditor_indentblock\/indentblock,commerce_stripe\/stripe,core\/drupal.active-link,core\/html5shiv,google_analytics\/google_analytics,history\/mark-as-read,iot\/global-styling,iot\/iot_notify,iot\/question-front,iot_commerce\/iot-commerce-modal-topup,iot_ielts\/contact_form,iot_message\/message-notification,iot_notify\/iot-notification,iot_quiz\/exam_lib_detail,iot_user\/iot_account,lazy\/lazy,private_message_nodejs\/browser_notification,rate\/fivestar,simple_popup_blocks\/simple_popup_blocks,statistics\/drupal.statistics,system\/base,views\/views.module","theme":"iot","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"iot_message_unread":0,"lazy":{"errorClass":"b-error","loadInvisible":false,"offset":100,"saveViewportOffsetDelay":"50","selector":".b-lazy","skipClass":"no-b-lazy","src":"data-src","successClass":"b-loaded","validateDelay":"25","placeholderSrc":"data:image\/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="},"privateMessageNodejs":{"nodejsUrl":"https:\/\/node.ieltsonlinetests.com:8444","nodejsSecret":"8c3531201c40730764a0b5cdd8a8f18374b7393629b1fa4b0d3d5cbc4f461fe6","debugEnabled":false},"simple_popup_blocks":{"settings":[{"pid":"22","identifier":"block-webinarregistration19-2","type":"0","css_selector":"1","layout":"4","visit_counts":"1","overlay":"1","escape":"0","trigger_method":"0","trigger_selector":"#custom-css-id","delay":"3","minimize":"0","close":"1","width":"757","status":"1"},{"pid":"27","identifier":"block-webinarregistration24","type":"0","css_selector":"1","layout":"4","visit_counts":"1","overlay":"1","escape":"0","trigger_method":"0","trigger_selector":"#custom-css-id","delay":"3","minimize":"0","close":"1","width":"757","status":"1"}]},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"key":"e4b45451e7d09a0bfe86","statistics":{"data":{"nid":"6528436"},"url":"\/core\/modules\/statistics\/statistics.php"},"history":{"nodesToMarkAsRead":{"6528436":true}},"language":"en","hidetest":"Hide Test Info","showtest":"Show Test Info","shownotepad":"Show Notepad","hidenotepad":"Hide Notepad","facebook_app_id":"212858352402139","user":{"uid":"935491","permissionsHash":"12dbb9aa428f2edd62e604cb5339860253aa4aa4cf7d38192663d8f414c9f85a"}}</script><script src="/sites/default/files/js/js_BKcMdIbOMdbTdLn9dkUq3KCJfIKKo2SvKoQ1AnB8D-g.js"></script><!--[if lte IE 9]><script src="/sites/default/files/js/js_VhqXmo4azheUjYC30rijnR_Dddo0WjWkF27k5gTL8S4.js"></script><![endif]--><script src="/sites/default/files/js/js_EkQytwPDD4k7uSPl4xvGx61bWhr1V5KihGAw6qFi3E4.js"></script><script src="/sites/default/files/js/js_T1slKIFdixzZtosaS7H-aJaW-Ny8LEpRBDQ7iG7miCg.js"></script><script src="/sites/default/files/js/js_QssuvkBrx8hV2zn_PWuNjJuiZMC0FrEO1oFG9MbdWf0.js"></script><script src="/sites/default/files/js/js_y5TG8Uo8kDp7fvHoBopCMRdrjaVAPGUunDgMr00Xj58.js"></script><script src="/sites/default/files/js/js_AxM8RFq5KCpEAaQjjpDriFXfZBCcnJzO1OCsWIOEttw.js"></script><script src="/sites/default/files/js/js_kINJcSoBXLdM3UknILoY9ppf52FVkqro6Wi0Pp2PpI0.js"></script><script src="https://js.stripe.com/v3/"></script><script src="/sites/default/files/js/js_c0duT10gp15i07YR4_lYl1jAQd_hi_xeY4zuBBwSDZ8.js"></script><script src="/sites/default/files/js/js_74vK8gJ77gMid2KM6pp015wgPnEPWLQP39AY_2vLknc.js"></script><script src="https://socket.ieltsonlinetests.com/jaypan/private-message-nodejs/node_modules/socket.io-client/dist/socket.io.js"></script><script src="/sites/default/files/js/js_kP6evU8k60K4FIGXUHG_1SkpNQrEGcp64Ybncr-Kivg.js"></script><script src="/sites/default/files/js/js_2ooySxCk2DziVNZ-t3OC4qcVjiEAe5E0VfL8yQOUjp0.js"></script><script src="/sites/default/files/js/js_58rf2aTOG78IRrsYW5r3REs9R0SsZH9ZqT7GsvoIDO8.js"></script><script src="/sites/default/files/js/js_XQABWpWvaEiBSpm7NPPC3Fs9QwRtOD7VLkdDT9KIyFE.js"></script><script src="/sites/default/files/js/js_s9lVo9IYpdygxni-msYJzMLjwsTvPSu69xSqzI6mSOo.js"></script><script src="/sites/default/files/js/js_QSLR2OabdF7THeJRGz2iPO4UmaPCLEor5ZqhkpQDI48.js"></script><script src="/sites/default/files/js/js_ksq15DP7vpEQoxN5UUglnvbfDuVsubxtN4pucdb6amA.js"></script><script src="/sites/default/files/js/js_EytL0pGRkt383HjPEoRdtRIRyR-wf5vZZnSZ-BMefPo.js"></script><script src="/sites/default/files/js/js_TPtYsVWv2faY0EmO6OsCK33TyJSwJ9oGgsXdznjpHrw.js"></script><script src="/sites/default/files/js/js_18rY4o8H86ZoCFu9XJWsCsGWjfJA2olnHIOV1-O1Q0w.js"></script><script src="/sites/default/files/js/js_VAwvOf1Noa-hP1haluW5rgEB7QZY6JzwFkDDVZYm-4A.js"></script><script src="/sites/default/files/js/js_TgGVCzgKWX4Kk9vNwQPKoC_DKa10QeC3U-Un0W62-ag.js"></script><script src="/sites/default/files/js/js_al3sWxdnb_a5CKP5QtFhlsil0OsFskrryVxmm3H-NdQ.js"></script><script src="/sites/default/files/js/js_8d_veUa6kFudpNFzjEcMccdmYkhU02d1UXMknmUAqrU.js"></script><script src="/sites/default/files/js/js_9L6hf2sFrwjm6ZOqAwAZZg9-1lE-C0Cj_C1w-bo4Svc.js"></script><script src="/sites/default/files/js/js_y0NC3AHa6rvyz5uEfzgig7B_qrXVcZEWDuyKJ-KuFMc.js"></script><script src="/sites/default/files/js/js_hF94qDhKRWU6uGhp47rkQWwZmMBbrHpf-pXERTAvPqg.js"></script><script src="/sites/default/files/js/js_v-wcy_hoIQ-7DZTGez5394AG_-ywM49z3WxzKwHbUdQ.js"></script><script src="/sites/default/files/js/js_Eo3BvooGJ4QjciglAmkgi-KXwE8USzg3Em72shBmwzU.js"></script><script src="/sites/default/files/js/js_F_a5E1BwLImHdGamBJqDZW-2OdFCPgXGoM31ea0PoDs.js"></script><script src="/sites/default/files/js/js_Gwjp7tKN3G3FMXB14Wgm7CWh1fna0OnOIi1e8p2-g94.js"></script><script src="/sites/default/files/js/js_saGtFgw6k4sdWrDZg-_nQ3XDLwfqbsMcyciTJjtWLzk.js"></script><script src="/sites/default/files/js/js_MWmSCiaZ2800TxgRSom3-hHuV7Fc5YZ8LHpL8univkQ.js"></script><script src="/sites/default/files/js/js_CW9ubfn6OSM8BLa16PZjOviwXSWOEuaG1Qd90cmdBjE.js"></script><script src="/sites/default/files/js/js_o3Azn1JAT7zxaOVeX3XQvYw6g7kh5ZcVtbp_g4ECIzo.js"></script><script src="/sites/default/files/js/js_DJLA3xrFN35Am7pkL46tWID0-IWFb1Aq5DNOWYEzoNo.js"></script><script src="/sites/default/files/js/js_avyt_qyZiHpLnnv48tQo-caULPSFf0LMh7oxCKHWt-U.js"></script><script src="/sites/default/files/js/js_pthHsbxm6tp637DA-Xyao832cfX7ShNRfzo_UCrx95U.js"></script><script src="/sites/default/files/js/js_JBEKPHE5tg2eXvstfQUE82l1Quk3ivK9FOSV7NVZgXY.js"></script><script src="/sites/default/files/js/js_x22PFNFzpss-z-XsHOMZSw4gvRZ8eyW1bw62_CXnLR4.js"></script><script src="/sites/default/files/js/js_UybKonhwXpq_BSxuFIyIWfDL54u3Vjpp-ZGD5aFbQ3Q.js"></script><script src="/sites/default/files/js/js_mjnA1cmV00D3hNYqsrUf36rvFYUFvO0PdCrBkuhNzeI.js"></script><script src="/sites/default/files/js/js_p8mlXCzrZdQD-c8NzDVOTAx4Utow_fTE8GFrLQexI3c.js"></script><script src="/sites/default/files/js/js_bzgzEGmfHZqF2GrqwbkFhGi094lcAtvvGvbXnK0br88.js"></script><script src="/sites/default/files/js/js_gPoA23fRpEVRYxwOzET7-EgAsi6fkdCG3d5l_c_LmKs.js"></script><script src="/sites/default/files/js/js_77EA1UllMOgpejdkjjnY0I2cfO2FBbnSqRtieQxcLOc.js"></script><script src="/sites/default/files/js/js_-XGDSNqX-3ZEVwBrGUVAMdpeWadQ_HWzTkMgQn4jjRI.js"></script><script src="/sites/default/files/js/js_EJN--j2aM-R9mDpM43fzTCjrJjF9coSZw36_yueGvv4.js"></script><script src="/sites/default/files/js/js_h2YwdpCjeeJnU9I6hVcGLGGPtq7aMf3cFPMeOZjAe1s.js"></script><script src="/sites/default/files/js/js_fEq9WfINBh4RDgcBWgi57FPFr1dYJIQOutynp4MY6NU.js"></script><script src="/sites/default/files/js/js_qibF0FROFouhwOOSpPgOGbJEeMRxmADEvOkWRJ_zewA.js"></script><script src="/sites/default/files/js/js_09q-2nINZLq-grz_lg6wRjXj61uWzqGBBYfPavnoho0.js"></script><script src="/sites/default/files/js/js_iB2V2oWQkLQKK6glUS6Kw6SEaQbTrLYUzzL67kld6_Q.js"></script><script src="/sites/default/files/js/js_X3z8Q5bXBDk2SpOU7deFjfcMJs2nYiwtREv2fYVS4SU.js"></script><script src="/sites/default/files/js/js_0RxqXBne4mUp3vKE-V4rcXGGUwiNR1d-tYc-BDIshOc.js"></script><script src="/sites/default/files/js/js_VhvgHX1SKkmg10mE0ewzf8dSk1bOR9Ku_25Y_eUd088.js"></script><script src="/sites/default/files/js/js_XXoCeTe_p_O0qjJ8OsiMBzHSo9Mq8ZXu_a4GM5XA44c.js"></script><script src="/sites/default/files/js/js_dP3dGM-_xclsAOQqXCYax-78jXSP3wVAQfKvbpigFhs.js"></script><script async src="https://static.addtoany.com/menu/page.js"></script></js-bottom-placeholder>
+      <div id="notification"></div>
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"80b8504cce","applicationID":"140263710","transactionName":"Y1MANkoEV0FTUEwNXVoZIwFMDFZcHXdKEUJVWj4hVxdcbnRcSgluclkQD3oQUF5WVkpJDEZTDAZdF39dQF5sC1lRWDIOWQZcWl1fXAFA","queueTime":0,"applicationTime":612,"atts":"TxQDQAIeRE8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+   </body>
+</html>
