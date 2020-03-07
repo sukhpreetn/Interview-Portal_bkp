@@ -14,6 +14,8 @@ urlpatterns = [
     path('quizsimple/', views.quizsimple, name='quizsimple'),
     path('report/', views.report, name='report'),
     path('upload/', views.upload, name='upload'),
+    path('comment/', views.comment, name='comment'),
+    path('question/', views.question, name='question'),
 
 ]
 

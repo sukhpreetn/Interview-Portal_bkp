@@ -34,7 +34,6 @@
          <header id="gtco-header" class="gtco-cover" role="banner">
             <div class="gtco-container">
                <div class="display-tc">
-                  <form method ="post" enctype="multipart/form-data" action="/upload/">> {%csrf_token%}
                      <p><h1><strong>Test Results.</strong></p></h1>
                      <p><strong>Total score  : {{score}} %</strong></p>
                      <a href="{% url 'AIP:pickskill' %}" class="btn btn-white">Start Over</a></li>
@@ -60,23 +59,34 @@
                               <th>Score</th>
                            </tr>
                         </table>
-                        <p><strong>Would you like to add a Comment or any suggestions:</strong></p>
-                        <dd><textarea rows=4 cols =100  name="ring">
-                           </textarea>
-                        <p><strong>Add a New Question:</strong></p>
-                        <dd><textarea rows=4 cols =100  name="rdir">
-                        </textarea></dd>
-                        <br>
-                        <dt>Upload a Question:
+                        <p></p>
+                        <form method ="post" action="/comment/">{%csrf_token%}
+                           <b>Would you like to add a Comment or any suggestions:</b><br>
+                           <textarea rows=3 cols=80  name="comment"></textarea><br>
+                           <input type="submit" value="Add Comment" >
+                           <i>{{commsuccess}} </i>
+                        </form>
+
+                        <form method ="post" action="/question/" >{%csrf_token%}
+                           <b>Add a New Question:</b><br>
+                           <textarea rows=3 cols =80  name="question"></textarea><br>
+                           <input type="submit" value="Add Question" >
+                           <i> {{quessuccess}} </i>
+
+                           <br>
+                        </form>
+
+                        <form method ="post" enctype="multipart/form-data" action="/upload/">{%csrf_token%}
+                           <strong>Upload a Question:</strong>
                            <input type="file" name="document" >
                            <br>
-                           <input type="submit"> Upload File
-                            {% if url %}
-                               Uploaded File : <a href = "{{ url }}" style="color:maroon;">{{url}}</a>
-                             {% endif %}
-
+                           <input type="submit" value="Upload File" >
+                           {% if url %}
+                           <span style="margin-left: 40px;"> Uploaded File : <a href = "{{ url }}" style="color:maroon;" span style>{{url}}</a></span>
+                           {% endif %}
+                        </form>
                   </div>
-               </form>
+
                </div>
             </div>
          </header>
