@@ -62,14 +62,14 @@
                         <p></p>
                         <form method ="post" action="/comment/">{%csrf_token%}
                            <b>Would you like to add a Comment or any suggestions:</b><br>
-                           <textarea rows=3 cols=80  name="comment"></textarea><br>
+                           <textarea rows=3 cols=80  name="comment" required></textarea><br>
                            <input type="submit" value="Add Comment" >
                            <i>{{commsuccess}} </i>
                         </form>
 
                         <form method ="post" action="/question/" >{%csrf_token%}
                            <b>Add a New Question:</b><br>
-                           <textarea rows=3 cols =80  name="question"></textarea><br>
+                           <textarea rows=3 cols =80  name="question" required></textarea><br>
                            <input type="submit" value="Add Question" >
                            <i> {{quessuccess}} </i>
 
