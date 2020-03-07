@@ -227,7 +227,11 @@ def question(request):
 def upload(request):
     context   = {}
     if request.method == 'POST':
-        uploaded_file = request.FILES['document']
+        try:
+            uploaded_file = request.FILES['document']
+        except MultiValueDictKeyError :
+            return  HttpResponse("Please upload a file")
+
         fs = FileSystemStorage()
         name = fs.save(uploaded_file.name,uploaded_file)
         context['url'] = fs.url(name)
