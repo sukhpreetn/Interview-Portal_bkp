@@ -1,7 +1,7 @@
 from django.db import models
 
 from django import forms
-from .models import Question ,Answer,Comment
+from .models import Answer
 
 class TakeQuizForm(forms.ModelForm):
     class Meta:

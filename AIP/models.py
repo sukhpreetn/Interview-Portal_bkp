@@ -30,9 +30,11 @@ class Answer(models.Model):
     def __str__(self):
         return self.ans_option
 
-class Comment(models.Model):
+class Result(models.Model):
     c_comment                   = models.CharField(max_length=100)
     c_new_quest                 = models.CharField(max_length=100)
+    c_tot_score                 = models.IntegerField(default=0)
+    c_cat_score1                = models.IntegerField(default=0)
 
     def __str__(self):
         return self.c_comment

@@ -16,6 +16,7 @@ urlpatterns = [
     path('upload/', views.upload, name='upload'),
     path('comment/', views.comment, name='comment'),
     path('question/', views.question, name='question'),
+    path('logout/', views.logout, name='logout'),
 
 ]
 

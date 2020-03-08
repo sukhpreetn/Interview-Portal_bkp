@@ -8,7 +8,7 @@ from django.core.files.storage import FileSystemStorage
 from .forms import TakeQuizForm
 
 # Create your views here.
-from .models import Question,Answer, Comment
+from .models import Question,Answer, Result
 from django.http import HttpResponse
 import json
 import  random
@@ -18,6 +18,9 @@ def index(request):
     return render(request, 'AIP/index.html')
 
 def pickskill(request):
+    request.session['user'] = request.user.get_username()
+    #user = request.session['user']
+    #return HttpResponse(request.session['user'])
     return  render(request, 'AIP/pickskill.html')
 
 def begin(request):
@@ -236,3 +239,11 @@ def upload(request):
         name = fs.save(uploaded_file.name,uploaded_file)
         context['url'] = fs.url(name)
     return  render(request,'AIP/report.html',context)
+
+def logout(request):
+    try:
+        del request.session['user']
+    except KeyError:
+        pass
+
+    return render(request, 'AIP/index.html')
