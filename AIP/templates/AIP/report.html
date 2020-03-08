@@ -55,9 +55,15 @@
                      <body>
                         <table style="width:100%">
                            <tr>
-                              <th>Concept</th>
-                              <th>Score</th>
+                              <th> <i>Concept  </i> </th>
+                              <th> <i> Score  <i> </th>
                            </tr>
+                          {% for key, value in cat_dict.items %}
+                           <tr>
+                              <td> {{ key }}    </td>
+                              <td> {{ value }}  </td>
+                           </tr>
+                           {% endfor %}
                         </table>
                         <p></p>
                         <form method ="post" action="/comment/">{%csrf_token%}

@@ -39,8 +39,14 @@
                            {{ form }}
                             <br></br>
                               <div>
-                                    <h2>Question {{total_q_asked}}</h2>
-                                    <p>{{question.q_text}}</p>
+                                 <h2>Question : {{total_q_asked}}</h2>
+                                       {% if out %}
+                                        {%for data in out %}
+                                          <pre>{{data}}</pre>
+                                         {% endfor %}
+                                       {% else %}
+                                           <p>{{question.q_text}}</p>
+                                       {% endif %}
                                     <div class="form-item form-type-radios form-item-question-723-answer-user-answer">
                                        <label for="edit-question-723-answer-user-answer">Choose one </label>
                                        <div id="edit-question-723-answer-user-answer" class="form-radios"></div>
