@@ -94,7 +94,7 @@ def quizsimple(request):
     score_context = {'score':score,'cat_dict':cat_dict}
     #return HttpResponse(cat_dict)
 
-    if questions.count() == 0 or total_q_asked == 6:
+    if questions.count() == 0 or total_q_asked == 4:
         #return render(request, 'AIP/report.html',{'score':score})
         return render(request, 'AIP/report.html', score_context)
 
@@ -140,9 +140,7 @@ def quizsimple(request):
         questions = Question.objects.filter(q_subject=subject, q_rank=rank)
         score_context = {'score': score, 'cat_dict': cat_dict}
 
-        if questions.count() ==0 or total_q_asked == 6:
-            #return HttpResponse(cat_dict)
-            #return render(request, 'AIP/report.html',{'score':score})
+        if questions.count() ==0 or total_q_asked == 4:
             return render(request, 'AIP/report.html',score_context)
 
         counter += 1
@@ -180,9 +178,10 @@ def quiz(request):
     questions = Question.objects.filter(q_subject=subject, q_rank=rank).filter(difficulty_score__gt=curr_difficulty_score).order_by('difficulty_score')
     cat_scores = json.dumps(cat_dict)
     Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
+    score_context = {'score': score, 'cat_dict': cat_dict}
 
     if questions.count() == 0:
-        return render(request, 'AIP/report.html',{'score':score})
+        return render(request, 'AIP/report.html',score_context)
 
     total_questions = questions.count()
     question = questions[0]
@@ -224,8 +223,9 @@ def quiz(request):
 
         curr_difficulty_score = question.no_times_anwered_incorrectly / question.no_times_ques_served
         questions = Question.objects.filter(q_subject=subject, q_rank=rank).filter(difficulty_score__gt=curr_difficulty_score).order_by('difficulty_score')
+        score_context = {'score': score, 'cat_dict': cat_dict}
         if questions.count() == 0:
-            return render(request, 'AIP/report.html' ,{'score':score})
+            return render(request, 'AIP/report.html' ,score_context)
 
         total_q_asked += 1
         question = questions[0]
