@@ -46,38 +46,6 @@ def begin(request):
         else:
             return render(request, 'AIP/beginsimple.html',context)
 
-def displayformat(question):
-    b = question
-    a = b.split("|")
-
-    out = []
-    empty = "    "
-
-    func_name  = ""
-    func_name1 = ""
-    func_name2 = ""
-    for entry in a:
-        if 'def' in entry:
-            c = entry.split(" ")
-            if "(" in c[1]:
-                d = c[1].split("(")
-                func_name = d[0]
-                func_name1 = func_name + "("
-                func_name2 = "print" + func_name1
-
-    for entry in a:
-        if 'def' in entry:
-            out.append(entry)
-        elif func_name1 in entry:
-            out.append(entry)
-        elif func_name2 in entry:
-            out.append(entry)
-        else:
-            newdata = empty + entry
-            out.append(newdata)
-
-    return out
-
 def quizsimple(request):
     subject                  = request.session['skill']
     rank                     = request.session['proficiency']
@@ -100,14 +68,7 @@ def quizsimple(request):
 
     total_questions = questions.count()
     question = questions[counter]
-    out = []
-    if '|' in question.q_text :
-        out = displayformat(question.q_text)
-
-    if len(out) == 0:
-        context = {'total_q_asked': total_q_asked, 'question': question}
-    else:
-        context = {'total_q_asked': total_q_asked, 'question': question, 'out': out}
+    context = {'total_q_asked': total_q_asked, 'question': question}
 
     if request.method == 'POST':
         option = request.POST.get('options')
@@ -132,7 +93,6 @@ def quizsimple(request):
         Question.objects.filter(pk=q.pk).update(no_times_ques_served=question.no_times_ques_served,no_times_anwered_correctly=question.no_times_anwered_correctly,no_times_anwered_incorrectly=question.no_times_anwered_incorrectly)
         score = (total_q_ans_correct / (total_q_asked )) * 100
         cat_scores = json.dumps(cat_dict)
-        #return HttpResponse(cat_scores)
 
         Result.objects.filter(c_user=user).update(c_tot_score=score)
         Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
@@ -146,14 +106,7 @@ def quizsimple(request):
         counter += 1
         total_q_asked += 1
         question = questions[counter]
-        out = []
-        if '|' in question.q_text:
-            out = displayformat(question.q_text)
-
-        if len(out) == 0:
-            context = {'total_q_asked': total_q_asked, 'question': question}
-        else:
-            context = {'total_q_asked': total_q_asked, 'question': question, 'out': out}
+        context = {'total_q_asked': total_q_asked, 'question': question}
 
         request.session['score'] = score
         request.session['counter'] = counter
@@ -185,14 +138,7 @@ def quiz(request):
 
     total_questions = questions.count()
     question = questions[0]
-    out = []
-    if '|' in question.q_text :
-        out = displayformat(question.q_text)
-
-    if len(out) == 0:
-        context = {'total_q_asked': total_q_asked, 'question': question}
-    else:
-        context = {'total_q_asked': total_q_asked, 'question': question, 'out': out}
+    context = {'total_q_asked': total_q_asked, 'question': question}
 
     if request.method == 'POST':
         option = request.POST.get('options')
@@ -229,15 +175,7 @@ def quiz(request):
 
         total_q_asked += 1
         question = questions[0]
-        out = []
-        if '|' in question.q_text:
-            out = displayformat(question.q_text)
-
-        if len(out) == 0:
-            context = {'total_q_asked': total_q_asked, 'question': question}
-        else:
-            context = {'total_q_asked': total_q_asked, 'question': question, 'out': out}
-
+        context = {'total_q_asked': total_q_asked, 'question': question}
         request.session['score'] = score
         request.session['total_q_asked'] = total_q_asked
         request.session['total_q_ans_correct'] = total_q_ans_correct

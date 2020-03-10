@@ -6,7 +6,7 @@ class Question(models.Model):
     q_subject                    = models.CharField(max_length=40)
     q_cat                        = models.CharField(max_length=40)
     q_rank                       = models.CharField(max_length=20)
-    q_text                       = models.CharField(max_length=700,default='')
+    q_text                       = models.TextField(null=True,default='')
     q_option1                    = models.CharField(max_length=200,default='')
     q_option2                    = models.CharField(max_length=200,default='')
     q_option3                    = models.CharField(max_length=200,default='')

@@ -40,7 +40,13 @@
                             <br></br>
                               <div>
                                  <h2>Question : {{total_q_asked}}</h2>
-                                 <pre>{{question.q_text}}</pre>
+                                 {% if out %}
+                                    {%for data in out %}
+                                          <pre>{{data}}</pre>
+                                    {% endfor %}
+                                 {% else %}
+                                    <p>{{question.q_text}}</p>
+                                 {% endif %}
                                     <div class="form-item form-type-radios form-item-question-723-answer-user-answer">
                                        <label for="edit-question-723-answer-user-answer">Choose one </label>
                                        <div id="edit-question-723-answer-user-answer" class="form-radios"></div>
@@ -50,7 +56,7 @@
                                           <tr class="multichoice-row 1">
                                              <td width="35">
                                                 <div class="form-item form-type-radio form-item-question-723-answer-user-answer">
-                                                   <input type="radio" id="1" name="options" value="1"  class="form-radio" required/>
+                                                   <input type="radio" id="1" name="options" value="1" class="form-radio" required/>
                                                 </div>
                                              </td>
                                              <td>
