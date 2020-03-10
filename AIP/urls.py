@@ -17,6 +17,7 @@ urlpatterns = [
     path('comment/', views.comment, name='comment'),
     path('question/', views.question, name='question'),
     path('logout/', views.logout, name='logout'),
+    path('export/', views.export, name='export'),
 
 ]
 

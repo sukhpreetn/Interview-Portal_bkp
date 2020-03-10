@@ -45,50 +45,61 @@
                                        <label for="edit-question-723-answer-user-answer">Choose one </label>
                                        <div id="edit-question-723-answer-user-answer" class="form-radios"></div>
                                     </div>
+                                    <p></p>
+
                                     <table>
                                        <tbody>
                                           <tr class="multichoice-row 1">
                                              <td width="35">
-                                                <div class="form-item form-type-radio form-item-question-723-answer-user-answer">
-                                                   <input type="radio" id="1" name="options" value="1" class="form-radio" required/>
-                                                </div>
+                                                <div class="form-item form-type-radios form-item-question-723-answer-user-answer">
+                                                   <input type="radio" id="op1" name="options" value="op1" class="form-radio"/>
+                                                   <td style="color:#FFFFFF">
+                                                      <label for="op1">{{question.q_option1}}</label></br>
+                                                   </td>
                                              </td>
-                                             <td>
-                                                <p>{{question.q_option1}}</p>
-                                             </td>
+                                          </tr>
+                                          <tr class="blank_row">
+                                              <td colspan="3">&nbsp;</td>
                                           </tr>
                                           <tr class="multichoice-row 2">
                                              <td width="35">
                                                 <div class="form-item form-type-radio form-item-question-723-answer-user-answer">
-                                                   <input type="radio" id="2" name="options" value="2" class="form-radio" />
+                                                   <input type="radio" id="op2" name="options" value="op2" class="form-radio" />
                                                 </div>
                                              </td>
-                                             <td>
-                                                <p>{{question.q_option2}}</p>
+                                             <td style="color:#FFFFFF">
+                                                <label for="op2">{{question.q_option2}}</label></br>
                                              </td>
+                                          </tr>
+                                          <tr class="blank_row">
+                                              <td colspan="3">&nbsp;</td>
                                           </tr>
                                           <tr class="multichoice-row 3">
                                              <td width="35">
                                                 <div class="form-item form-type-radio form-item-question-723-answer-user-answer">
-                                                   <input type="radio" id="3" name="options" value="3" class="form-radio" />
+                                                   <input type="radio" id="op3" name="options" value="op3" class="form-radio" />
                                                 </div>
                                              </td>
-                                             <td>
-                                                <p>{{question.q_option3}}</p>
+                                             <td style="color:#FFFFFF">
+                                                <label for="op3">{{question.q_option3}}</label></br>
                                              </td>
+                                          </tr>
+                                          <tr class="blank_row">
+                                              <td colspan="3">&nbsp;</td>
                                           </tr>
                                           <tr class="multichoice-row 4">
                                              <td width="35">
                                                 <div class="form-item form-type-radio form-item-question-723-answer-user-answer">
-                                                   <input type="radio" id="4" name="options" value="4" class="form-radio" />
+                                                   <input type="radio" id="op4" name="options" value="op4" class="form-radio" />
                                                 </div>
                                              </td>
-                                             <td>
-                                                <p>{{question.q_option4}}</p>
+                                             <td style="color:#FFFFFF" font size="10">
+                                                <label for="op4">{{question.q_option4}}</label></br>
                                              </td>
                                           </tr>
                                        </tbody>
                                     </table>
+                                 <p></p>
                                  <div class="form-group">
                                         <input type="submit" name="Begin Test" value= "Next" class="btn btn-white"/> &nbsp;&nbsp;&nbsp;&nbsp;
                                           <a href="{% url 'AIP:report' %}" class="btn btn-white">End Test</a>

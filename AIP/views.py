@@ -4,15 +4,22 @@ from django.http import HttpResponse, request, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from django.utils.datastructures import MultiValueDictKeyError
 from django.core.files.storage import FileSystemStorage
-
-from .forms import TakeQuizForm
-
-# Create your views here.
 from .models import Question,Answer,Result
 from django.http import HttpResponse
 import json
 import  random
+import csv
 
+def export(request):
+    response = HttpResponse(content_type='text/csv')
+    writer = csv.writer(response)
+    writer.writerow(['q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'])
+    for data in Question.objects.all().values_list('q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'):
+        writer.writerow(data)
+
+    response['Content-Disposition'] = 'attachment; filename="questions.csv"'
+    return response
+    #return  HttpResponse("hello")
 
 def index(request):
     return render(request, 'AIP/index.html')
