@@ -8,7 +8,10 @@ from .models import Question,Answer,Result
 from django.http import HttpResponse
 import json
 import  random
-import csv
+import csv , io
+
+from django.contrib import messages
+from django.contrib.auth.decorators import  permission_required
 from .forms import QuestionForm
 
 
@@ -265,5 +268,34 @@ def add(request):
     else:
         form = QuestionForm()
     return render(request, 'AIP/add.html', {'form': form})
+
+@permission_required('admin.can_add_log_entry')
+def questionupload(request):
+    #template = question_upload.html
+
+    prompt  = {
+        'order': 'Order of CSV should be Question,Option1,Option2,Option3,Option4,answer option'
+    }
+    if request.method == "GET":
+        return  render(request,'AIP/question_upload.html',prompt)
+
+    csv_file = request.FILES['file']
+    if not csv_file.name.endswith('.csv'):
+        messages.error(request,'This is not a cvs file')
+
+    data_set = csv_file.read().decode('UTF-8')
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    for column in csv.reader(io_string,delimiter = ',',quotechar = "|"):
+        _,created = Question.objects.update_or_create(
+            q_text = column[0],
+            q_option1 = column[1],
+            q_option2 = column[2],
+            q_option3 = column[3],
+            q_option4 = column[4],
+            q_answer = column[5]
+        )
+        context = {}
+    return render(request, 'AIP/question_upload.html',context)
 
 

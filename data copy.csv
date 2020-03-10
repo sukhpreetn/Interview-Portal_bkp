@@ -1,0 +1,115 @@
+q_text,q_option1,q_option2,q_option3,q_option4,q_answer
+"s=[1,2];t=[3,4];print(s+t)", "[1,2,3,4]","[4,6]","All of the Above","None of the Above",1
+"tup=(4,5);print len(tup)", "0","1","2","Error",3
+"Is this an valid statement: 'I have eaten'+10+'apples'", "True","False","All of the above","None of the Above",2
+"fruit='Apple'; print(fruit(::-1)); prints", "elppA","e","Apple","Error",4
+"animal='Elephant'; print(animal[7]; prints)", "n","t","Error","None of the Above",2
+"list1=[5,6,7,'apple',(10,20)];print(len(list1)) ", "5", "6","7","Error",1
+"Is this a valid statement: print(apple*2)", "True","False","All of the Above","None of the Above",2
+"print('grapes'=='Grapes') prints", "Error","True","False","1",3
+"login= {} is a valid dictionary", "True","False","None of the above","All of the above",1
+"print(not True)", "True","False","All of the Above","None of the Above",2
+"d={'place':'bangalore'}; d['state']='KA' will add key state to the dictionary", "True","False","All of the Above","None of the Above",
+1
+"'as' in ['ass','bass','class','gas'] ", "True","False","All of the Above","None of the Above",2
+"d={'fruit':'apple','color':'green'}; print (d['color'])", 'apple','green','red','Error',2
+"print(max(100,89,171,99))", "171","100","Error","None of the Above",1
+"lis1=[4,5,6]; lis1.append(8)", "appends data at the end ","appends data at any position","Error","None of the Above",1
+"print(type(None)) prints", "String","NoneType","Error","None of the Above",2
+"List can have duplicate values", "True","False","All of the above","None of the Above",1
+"fruit='orange';fruit='grapes';print(fruit)", "orange","grapes","orange and grapes","Error",2
+"list1=[4,3,2,1,10];print(list1[5])", "10","1","Error","None of the Above",3
+"fp=open('file.txt')", "opens a file in read mode","opens a file in read and write mode","opens a file in write mode","opens file in
+append mode"],1
+"def test(a=10,b): print(a); test(4,5)", "4","10","5","Error",4
+"Python supports do..while loop", "True","False","All of the above","None of the above",2
+"A function can be called directly but cannot be called in another function", "True","False","All of the above","None of the Above",
+2
+"Which of the following is valid for loop", "for a in range(1,3):print(a)","for a in (3): print(a)","for a in loop(3): print(a)","for a
+in (1,3):print(a)",1
+"A function has to be called before defining it", "True","False","None of the Above","All of the above",2
+"file.closed returns true if the file is closed", "True","False","None of the Above","All of the above",1
+"what does the following function return, def test(a,b,c=50):return a; return c; test(3,4,10)", "3 and 10","3 and 50","3","50",
+3
+"A module name is the file name with .py extension", "True","False","None of the Above","All of the above",1
+"from modulename import name1,name2 imports all the functions from that module ", "True","False","None of the above","All of the above",
+2
+"Modules can import other modules", "True","False","All of the Above","None of the Above",1
+"pip install <modulename> is used to install python packages", "True","False","All of the Above","None of the Above",1
+"Are these statements valid, import factorial; factorial(5)", "True","False","All of the above","None of the above",2
+"os and sys modules are third party modules", "True","False","All of the above","None of the above",2
+"dir() built-in function is used to get the names, defined by a module", "True","False","All of the Above","None of the Above",1
+"Which of the function is not built-in function in python", "factorial()","input()","print()","All of the above",1
+"Which of the following is not a valid assignment operator?", "a+=1","a-=1","a*=1","a++=1",4
+"elseif is a valid construct in python", "True","False","All of the Above","None of the Above",2
+"sys.argv contains the command line arguments passed to a python program", "True","False","All of the Above","None of the Above",
+1
+"It is not possible to create custom exceptions in Python", "True","False","All of the above","None of the above",2
+"Which of the following is correct", "An exception is an error that occurs at the runtime","A syntax error is also an exception","An
+exception is used to exclude a block of code in Python","All of the above",1
+"What will happen if you try to open a file that doesn't exist", "A new file is created","Nothing will happen","An exception is
+raised","None of the above",3
+"There can be more than one finally clause in python", "True","False","All of the above","None of the Above",2
+"What is the output ... num=5.0; try: print(5/num); except: print('Exception Occured')", "1.0","5.0","0","Exception",1
+"__init__ method is mandatory for all the classes", "True","False","None of the Above","All of the above",2
+"There can be more than one class in a module", "True","False","None of the Above","All of the above",1
+"Class variables can be shared by all instances of a class", "True","False","All of the Above","None of the Above",1
+"def test(): print('Good Day'); a=test()", "test() is a function and 'a' is a variable","Both test() and 'a' refer to the same object","test() and 'a' refer to different objects","Syntax Error",1
+"Finally clause is not executed when an exception occurs", "True","False","Ignore","Ignore",2
+"Methods are functions defined inside the body of the class", "True","False","All of the Above","None of the Above",1
+"self is an optionl argument in all the methods of the class", "True","False","All of the Above","None of the Above",2
+"It is possible to have same class name in two different modules ", "True","False","All of the Above","None of the Above",1
+"Inheritance is a way to form new classes using classes that have already been defined.", "True","False","All of the Above","None of the Above",1
+"Are the two function calls valid, def add(a,b): print(a+b); add(4,5);add('Good','Morning')", "Only the first call is valid","Only the second call is valid","Both the calls are valid","None of the Above",3
+"a=10; def test(): a=a+1; print(a); test()", "prints 10 ","prints 11","Error","None of the Above",3
+"a=10; def test(): print(a+1); test()", "prints 10 ","prints 11","Error","None of the Above",2
+"NameError is displayed when a variable is not defined", "True","False","All of the Above","None of the Above",1
+"Is this a valid python class, class TestClass:'''This is a test class''' ;pass", "True","False","All of the Above","None of the Above",1
+"Which of the following statements can be used to check, whether an object 'obj' is an instance of class A or not?", "obj.isinstance(A)","A.isinstance(obj)","isinstance(obj, A)","isinstance(A, obj)",3
+"Which module in python supports regular expressions?", "regex","re","pyregex","regularexpressions",2
+"What does the function re.match do? ", "matches a pattern at any position in the string","matches a pattern at starting position of the string","there is no such function","None of the above",2
+"What does the function re.search do? ", "matches a pattern at any position in the string","matches a pattern at starting position of the string","there is no such function","None of the above",1
+"Which of the following print statements will print all the names from the list on the seperate line, names=['apple','orange','pear','kiwi']", "print('\n'.join(names))","print(names.join('\n'))","print(names.append('\n'))","None of the above",1
+"s=(3);What is the type of s", "tuple","str","int","float",3
+"Which of the following functions can help us to find the version of python that we are currently working on?",
+"sys.version","sys.version()","sys.version(0)","None of the above",1
+"Third party modules/packages in python are installed in site-packages folder", "True","False","None of the above","All of the above",1
+"What is the command to see the modules that are installed on your machine? ", "dir('modules')","help('modules')","list('modules')","All of the above",2
+"Objects are created from class", "True","False","Error","None",1
+"from math import sin; print(cos(90)); prints the value of cos(90)", "True","False","Error","None",3
+"Lambda functions takes only two arguments", "True","False","Error","None",2
+"os module in python provides a way of using operating system dependent functionality", "True","False","No such module","None of the
+above",1
+"os.environ gets the users environment ", "True","False","No such module","None of the above",1
+"Web scrapping is a technique used to extract content from webpages", "True","False","No such module","None of the above",1
+"Importing a module that does not exist will raise what type of exception", "KeyError","NameError","TypeError","ImportError",4
+"Lambda functions can have any number of expressions", "True","False","None of the above","All of the above",2
+"Which keyword is used to define Anonynous functions in python", "def","function","lambda","All of the above",3
+""" import re sum = 0 pattern = 'back' if re.match(pattern, 'backup.txt'):sum += 1 if re.match(pattern, 'text.back'):sum += 2 if re.search(pattern,
+'backup.txt'):sum += 4 if re.search(pattern, 'text.back'):sum += 8 print(sum)""", "1","15","5","13",4
+"Flask framework is used for web development", "True","False","All of the Above","None of the Above",1
+"""<pre> class Parent(object):x = 1 class Child1(Parent):pass class Child2(Parent):pass print (Parent.x, Child1.x, Child2.x) Child1.x = 2 print (
+Parent.x, Child1.x, Child2.x) Parent.x = 3 print (Parent.x, Child1.x, Child2.x)</pre>""", ["1 1 1 <br>1 2 1<br> 3 2 3","1 1 1 <br>2 1 1<br> 3 2 3","Error","None",1
+"Python supports MySQL DB by default", "True","False","All of the Above","None of the Above",2
+"""<pre> for x in range(2,11,2):var1.append(x) var2 = var1[1:-1] print(var1) print(var2)</pre>""", "4","6","8",'Error',4
+"A tuple 'colors' contains five elements. How can you set the 3rd element of the tuple to 'Python'? ",
+"colors[2]='Python'","colors(2)='Python'","colors[3]='Python'","None of the above",4
+"It is not possible to import more than one module in a python file", "True","False","Possible only for custom modules","Possible only
+for standard modules",2
+"In dictionaries duplicate values are allowed", "True","False","All of the Above","None of the Above",1
+"print type(1,2) prints ", "class 'tuple'","class 'int'","class 'list'","Error",4
+"""<pre> def test(a,b): return a+b return a-b What is the output of below code? print(test(6,5))</pre>""", "(11,1)","[11,1]","([11,1])","None of the above",4
+"""<pre> def test(a,b): return a+b,a-b What does it print? print(test(6,5))</pre>""", "(11,1)","[11,1]","11","Error",0
+"s='Python strings are immutable';print(s.startswith('Pyth')); prints", "True","False","0","1",1
+"sen=' I love Python '; print(sen.rstrip())", "I love Python","I love Python","Error","None of the Above",4
+"Dictionary cannot have tuples as a key", "True","False","All of the Above","None of the Above",2
+"s= set([1,1,2,3,3,3,4,5]); print(len(s))", "5","7","Error","None of the Above",1
+"""<pre> s=int(input('Enter First Value: ')) 10 t=int(input('Enter Second Value: ')) 30 print (s+t)</pre>""", "40","1030","10
+30","Error",1
+"print(a=10)", "10","a=10","Error","None of the Above",3
+"In a module, there can be two functions with the same name", "True","False","All of the above","None of the Above",2
+"Python supports null datatype", "True","False","All of the above","None of the Above",2
+"""<pre> x=101 if x >= 100: break print(x)</pre>""", "101","100","Error","None",3
+"""<pre> s=lambda t:t[::-1] print(s([3,1,2]))</pre>""", "[3,1,2]","[2,1,3]","Error","None",2
+"print(int('sixtwothree')), prints", "6,2,3","(6,2,3)","Error","None",3
+"Sort, sorts the value in descending order by default", "True","False","Error","None",2

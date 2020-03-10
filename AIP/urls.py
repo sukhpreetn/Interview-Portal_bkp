@@ -20,6 +20,8 @@ urlpatterns = [
     path('export/', views.export, name='export'),
     path('debug/', views.debug, name='debug'),
     path('add/', views.add, name='add'),
+    path('questionupload/', views.questionupload, name='questionupload'),
+
 ]
 
 if settings.DEBUG:
