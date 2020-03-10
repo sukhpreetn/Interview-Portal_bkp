@@ -61,7 +61,6 @@ def quizsimple(request):
     cat_scores = json.dumps(cat_dict)
     Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
     score_context = {'score':score,'cat_dict':cat_dict}
-    #return HttpResponse(cat_dict)
 
     if questions.count() == 0 or total_q_asked == 4:
         #return render(request, 'AIP/report.html',{'score':score})
@@ -77,6 +76,7 @@ def quizsimple(request):
         ans = Answer()
         ans.question = q
         question.no_times_ques_served +=1
+
 
         if question.q_answer == option:
             ans.ans_option = option
@@ -286,7 +286,7 @@ def questionupload(request):
     data_set = csv_file.read().decode('UTF-8')
     io_string = io.StringIO(data_set)
     next(io_string)
-    for column in csv.reader(io_string,delimiter = ',',quotechar = "|"):
+    for column in csv.reader(io_string,delimiter = '|'):
         _,created = Question.objects.update_or_create(
             q_text = column[0],
             q_option1 = column[1],
