@@ -242,6 +242,7 @@ def export(request):
     response['Content-Disposition'] = 'attachment; filename="questions.csv"'
     return response
 
+@permission_required('admin.can_add_log_entry')
 def debug(request):
     response = HttpResponse(content_type='text/csv')
     writer = csv.writer(response)
