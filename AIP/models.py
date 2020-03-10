@@ -16,7 +16,7 @@ class Question(models.Model):
     no_times_ques_served         = models.IntegerField(default=0)
     no_times_anwered_correctly   = models.IntegerField(default=0)
     no_times_anwered_incorrectly = models.IntegerField(default=0)
-    difficulty_score             = models.DecimalField(max_digits = 5, decimal_places = 2)
+    difficulty_score             = models.DecimalField(default=0,max_digits = 5, decimal_places = 2)
 
     def __str__(self):
         return self.q_text

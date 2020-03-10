@@ -18,7 +18,8 @@ urlpatterns = [
     path('question/', views.question, name='question'),
     path('logout/', views.logout, name='logout'),
     path('export/', views.export, name='export'),
-
+    path('debug/', views.debug, name='debug'),
+    path('add/', views.add, name='add'),
 ]
 
 if settings.DEBUG:

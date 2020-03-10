@@ -9,17 +9,8 @@ from django.http import HttpResponse
 import json
 import  random
 import csv
+from .forms import QuestionForm
 
-def export(request):
-    response = HttpResponse(content_type='text/csv')
-    writer = csv.writer(response)
-    writer.writerow(['q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'])
-    for data in Question.objects.all().values_list('q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'):
-        writer.writerow(data)
-
-    response['Content-Disposition'] = 'attachment; filename="questions.csv"'
-    return response
-    #return  HttpResponse("hello")
 
 def index(request):
     return render(request, 'AIP/index.html')
@@ -237,3 +228,42 @@ def logout(request):
         pass
 
     return render(request, 'AIP/index.html')
+
+def export(request):
+    response = HttpResponse(content_type='text/csv')
+    writer = csv.writer(response)
+    writer.writerow(['q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'])
+    for data in Question.objects.all().values_list('q_subject','q_cat','q_rank','q_text','q_option1','q_option2','q_option3','q_option4','q_answer','q_ask_time','no_times_ques_served','no_times_anwered_correctly','no_times_anwered_incorrectly','difficulty_score'):
+        writer.writerow(data)
+
+    response['Content-Disposition'] = 'attachment; filename="questions.csv"'
+    return response
+
+def debug(request):
+    response = HttpResponse(content_type='text/csv')
+    writer = csv.writer(response)
+    writer.writerow(
+        ['q_subject', 'q_cat', 'q_rank', 'q_text', 'q_option1', 'q_option2', 'q_option3', 'q_option4', 'q_answer',
+         'q_ask_time', 'no_times_ques_served', 'no_times_anwered_correctly', 'no_times_anwered_incorrectly',
+         'difficulty_score'])
+    for data in Question.objects.all().values_list('q_subject', 'q_cat', 'q_rank', 'q_text', 'q_option1', 'q_option2',
+                                                   'q_option3', 'q_option4', 'q_answer', 'q_ask_time',
+                                                   'no_times_ques_served', 'no_times_anwered_correctly',
+                                                   'no_times_anwered_incorrectly', 'difficulty_score'):
+        writer.writerow(data)
+
+    response['Content-Disposition'] = 'attachment; filename="analytics.csv"'
+    return response
+
+def add(request):
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            question = form.save()
+            question.save()
+        return redirect('AIP:index')
+    else:
+        form = QuestionForm()
+    return render(request, 'AIP/add.html', {'form': form})
+
+
