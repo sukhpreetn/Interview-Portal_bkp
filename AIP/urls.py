@@ -21,7 +21,7 @@ urlpatterns = [
     path('debug/', views.debug, name='debug'),
     path('add/', views.add, name='add'),
     path('questionupload/', views.questionupload, name='questionupload'),
-
+    path('scores/', views.scores, name='scores'),
 ]
 
 if settings.DEBUG:

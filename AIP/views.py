@@ -93,10 +93,11 @@ def quizsimple(request):
             ans.save()
 
         Question.objects.filter(pk=q.pk).update(no_times_ques_served=question.no_times_ques_served,no_times_anwered_correctly=question.no_times_anwered_correctly,no_times_anwered_incorrectly=question.no_times_anwered_incorrectly)
-        score = (total_q_ans_correct / (total_q_asked )) * 100
+        score1 = (total_q_ans_correct / (total_q_asked )) * 100
+        score = round(score1,2)
         cat_scores = json.dumps(cat_dict)
 
-        Result.objects.filter(c_user=user).update(c_tot_score=score)
+        Result.objects.filter(c_user=user).update(c_tot_score=score1)
         Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
 
         questions = Question.objects.filter(q_subject=subject, q_rank=rank)
@@ -163,10 +164,11 @@ def quiz(request):
             ans.save()
 
         Question.objects.filter(pk=q.pk).update(no_times_ques_served=question.no_times_ques_served,no_times_anwered_correctly=question.no_times_anwered_correctly,no_times_anwered_incorrectly=question.no_times_anwered_incorrectly,difficulty_score=curr_difficulty_score)
-        score = (total_q_ans_correct / total_q_asked) * 100
+        score1 = (total_q_ans_correct / total_q_asked) * 100
+        score = round(score1, 2)
         cat_scores = json.dumps(cat_dict)
 
-        Result.objects.filter(c_user=user).update(c_tot_score=score)
+        Result.objects.filter(c_user=user).update(c_tot_score=score1)
         Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
         #curr_difficulty_score = question.no_times_anwered_incorrectly / question.no_times_anwered_incorrectly + question.no_times_anwered_correctly
 
@@ -303,5 +305,11 @@ def questionupload(request):
         )
         context = {}
     return render(request, 'AIP/question_upload.html',context)
+
+@permission_required('admin.can_add_log_entry')
+def scores(request):
+    results = Result.objects.all()
+    context = {'results':results}
+    return  render(request, 'AIP/scores.html',context)
 
 

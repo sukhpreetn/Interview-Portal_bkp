@@ -33,7 +33,7 @@ class Answer(models.Model):
 
 class Result(models.Model):
     c_user                      = models.CharField(max_length=100)
-    c_tot_score                 = models.IntegerField(default=0)
+    c_tot_score                 = models.DecimalField(default=0,max_digits = 5, decimal_places = 2)
     c_cat_scores                = models.TextField(null=True,default=0)
     c_comment                   = models.TextField(null=True,default='')
     c_new_quest                 = models.TextField(null=True,default='')
