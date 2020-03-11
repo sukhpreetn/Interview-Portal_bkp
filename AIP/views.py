@@ -308,7 +308,7 @@ def questionupload(request):
 
 @permission_required('admin.can_add_log_entry')
 def scores(request):
-    results = Result.objects.all()
+    results = Result.objects.all().order_by('-c_attempt_date')
     context = {'results':results}
     return  render(request, 'AIP/scores.html',context)
 

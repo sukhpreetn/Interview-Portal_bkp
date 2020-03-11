@@ -37,6 +37,7 @@ class Result(models.Model):
     c_cat_scores                = models.TextField(null=True,default=0)
     c_comment                   = models.TextField(null=True,default='')
     c_new_quest                 = models.TextField(null=True,default='')
+    c_attempt_date              = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
         return self.c_user

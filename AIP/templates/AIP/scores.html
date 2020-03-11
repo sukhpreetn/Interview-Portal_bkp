@@ -58,12 +58,14 @@
                               <th style="color:#000000"> <i>User  </i> </th>
                               <th style="color:#000000"> <i> Total Score  </i></th>
                               <th style="color:#000000"> <i> Category Score  </i></th>
+                               <th style="color:#000000"> <i> Attempt Date  </i></th>
                            </tr>
                              {% for result in results %}
                               <tr>
                                  <td style="color:#0000ff" > {{result.c_user}}    </td>
                                  <td style="color:#0000ff" > {{result.c_tot_score}}  </td>
                                   <td style="color:#0000ff" > {{result.c_cat_scores}}
+                                  <td style="color:#0000ff" > {{result.c_attempt_date}}
                               </tr>
                               {% endfor %}
                         </table>
