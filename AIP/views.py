@@ -63,7 +63,7 @@ def quizsimple(request):
     score_context = {'score':score,'cat_dict':cat_dict}
 
     if questions.count() == 0:
-        return  HttpResponse(questions.count())
+        #return  HttpResponse(questions.count())
         #return render(request, 'AIP/report.html',{'score':score})
         return render(request, 'AIP/report.html', score_context)
 
