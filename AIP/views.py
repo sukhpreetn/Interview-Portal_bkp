@@ -62,14 +62,15 @@ def quizsimple(request):
     Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
     score_context = {'score':score,'cat_dict':cat_dict}
 
-    if questions.count() == 0 or total_q_asked == 4:
+    if questions.count() == 0:
+        return  HttpResponse(questions.count())
         #return render(request, 'AIP/report.html',{'score':score})
         return render(request, 'AIP/report.html', score_context)
 
     total_questions = questions.count()
     question = questions[counter]
     context = {'total_q_asked': total_q_asked, 'question': question}
-
+    #return  HttpResponse(counter)
     if request.method == 'POST':
         option = request.POST.get('options')
         q = Question(question.pk)
@@ -101,12 +102,13 @@ def quizsimple(request):
         questions = Question.objects.filter(q_subject=subject, q_rank=rank)
         score_context = {'score': score, 'cat_dict': cat_dict}
 
-        if questions.count() ==0 or total_q_asked == 4:
+        if questions.count() == counter + 1 :
             return render(request, 'AIP/report.html',score_context)
 
         counter += 1
         total_q_asked += 1
         question = questions[counter]
+        #return HttpResponse(question)
         context = {'total_q_asked': total_q_asked, 'question': question}
 
         request.session['score'] = score
@@ -171,7 +173,7 @@ def quiz(request):
         curr_difficulty_score = question.no_times_anwered_incorrectly / question.no_times_ques_served
         questions = Question.objects.filter(q_subject=subject, q_rank=rank).filter(difficulty_score__gt=curr_difficulty_score).order_by('difficulty_score')
         score_context = {'score': score, 'cat_dict': cat_dict}
-        if questions.count() == 0:
+        if questions.count() == 20:
             return render(request, 'AIP/report.html' ,score_context)
 
         total_q_asked += 1
