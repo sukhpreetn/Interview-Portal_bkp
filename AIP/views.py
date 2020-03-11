@@ -289,12 +289,15 @@ def questionupload(request):
     next(io_string)
     for column in csv.reader(io_string,delimiter = '|'):
         _,created = Question.objects.update_or_create(
-            q_text = column[0],
-            q_option1 = column[1],
-            q_option2 = column[2],
-            q_option3 = column[3],
-            q_option4 = column[4],
-            q_answer = column[5]
+            q_subject    = column[0],
+            q_cat        = column[1],
+            q_rank       = column[2],
+            q_text       = column[3],
+            q_option1    = column[4],
+            q_option2    = column[5],
+            q_option3    = column[6],
+            q_option4    = column[7],
+            q_answer     = column[8]
         )
         context = {}
     return render(request, 'AIP/question_upload.html',context)
