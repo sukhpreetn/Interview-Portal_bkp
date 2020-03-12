@@ -65,16 +65,12 @@ def quizsimple(request):
     score_context = {'score':score,'cat_dict':cat_dict}
 
     if questions.count() == 0:
-        #return  HttpResponse(questions.count())
-        #return render(request, 'AIP/report.html',{'score':score})
         return render(request, 'AIP/report.html', score_context)
 
     total_questions = questions.count()
-    #question = questions[counter]
     ind = random.randint(1, max)
     question = questions[ind]
     context = {'total_q_asked': total_q_asked, 'question': question}
-    #return  HttpResponse(counter)
     if request.method == 'POST':
         option = request.POST.get('options')
         q = Question(question.pk)
@@ -108,15 +104,14 @@ def quizsimple(request):
         max = Question.objects.filter(q_subject=subject, q_rank=rank).count()
         score_context = {'score': score, 'cat_dict': cat_dict}
 
-        if questions.count() == counter + 1 :
+        #if questions.count() == counter + 1 :
+        if questions.count() == 30 :
             return render(request, 'AIP/report.html',score_context)
 
         counter += 1
         total_q_asked += 1
-        #question = questions[counter]
         ind = random.randint(1, max)
         question = questions[ind]
-        #return HttpResponse(question)
         context = {'total_q_asked': total_q_asked, 'question': question}
 
         request.session['score'] = score
