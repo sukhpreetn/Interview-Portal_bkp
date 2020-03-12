@@ -58,6 +58,8 @@ def quizsimple(request):
     user                     = request.session['user']
 
     questions = Question.objects.filter(q_subject=subject, q_rank=rank)
+    max = Question.objects.filter(q_subject=subject, q_rank=rank).count()
+
     cat_scores = json.dumps(cat_dict)
     Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
     score_context = {'score':score,'cat_dict':cat_dict}
@@ -68,7 +70,9 @@ def quizsimple(request):
         return render(request, 'AIP/report.html', score_context)
 
     total_questions = questions.count()
-    question = questions[counter]
+    #question = questions[counter]
+    ind = random.randint(1, max)
+    question = questions[ind]
     context = {'total_q_asked': total_q_asked, 'question': question}
     #return  HttpResponse(counter)
     if request.method == 'POST':
@@ -101,6 +105,7 @@ def quizsimple(request):
         Result.objects.filter(c_user=user).update(c_cat_scores=cat_scores)
 
         questions = Question.objects.filter(q_subject=subject, q_rank=rank)
+        max = Question.objects.filter(q_subject=subject, q_rank=rank).count()
         score_context = {'score': score, 'cat_dict': cat_dict}
 
         if questions.count() == counter + 1 :
@@ -108,7 +113,9 @@ def quizsimple(request):
 
         counter += 1
         total_q_asked += 1
-        question = questions[counter]
+        #question = questions[counter]
+        ind = random.randint(1, max)
+        question = questions[ind]
         #return HttpResponse(question)
         context = {'total_q_asked': total_q_asked, 'question': question}
 
