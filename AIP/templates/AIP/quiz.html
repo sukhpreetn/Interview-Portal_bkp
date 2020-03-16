@@ -31,7 +31,6 @@
                <div class="display-tc">
                   <div class="row">
                         <form id="form" name="form" method="post">{%  csrf_token %}
-                           {{ form }}
                             <br></br>
                               <div>
                                  <h2>Question : {{total_q_asked}}</h2>
@@ -95,7 +94,7 @@
                                  <p></p>
                                  <div class="form-group">
                                         <input type="submit" name="Begin Test" value= "Next" class="btn btn-white"/> &nbsp;&nbsp;&nbsp;&nbsp;
-                                          <a href="{% url 'AIP:report' %}" class="btn btn-white">End Test</a>
+                                        <input type="submit" name="END" value= "STOP" class="btn btn-white"/> &nbsp;&nbsp;&nbsp;&nbsp;
                                  </div>
                               </div>
                         </form>

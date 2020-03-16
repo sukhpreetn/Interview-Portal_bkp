@@ -33,7 +33,8 @@
                   <div class="row">
                      <form id="form" name="form" method="post" action="/begin/">{%  csrf_token %}
                       {{ form.as_p }}
-                     <p><strong>Pick a skill to start the test</strong></p>
+                     <p><strong><i style="color:#000000">Welcome {{user}}<i></strong></p>
+                        <p><strong>Please pick a skill to start the test</strong></p>
                      <div class="form-group">
                         <select name="skill" id="skill" class="form-control" style="color:#000000" >
                            <option value="Python" >Python</option>
