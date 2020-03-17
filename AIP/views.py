@@ -88,7 +88,7 @@ def quizsimple(request):
         Question.objects.filter(pk=q.pk).update(no_times_ques_served=question.no_times_ques_served,
                                                 no_times_anwered_correctly=question.no_times_anwered_correctly,
                                                 no_times_anwered_incorrectly=question.no_times_anwered_incorrectly)
-        if counter == 4 or request.POST.get('END') == 'STOP':
+        if counter == 20 or request.POST.get('END') == 'STOP':
             score1 = (total_q_ans_correct / (total_q_asked - 1)) * 100
             score = round(score1)
             cat_scores = json.dumps(cat_dict)
@@ -156,7 +156,7 @@ def quiz(request):
                                                 no_times_anwered_incorrectly=question.no_times_anwered_incorrectly,
                                                 difficulty_score=curr_difficulty_score)
 
-        if counter == 4 or request.POST.get('END') == 'STOP':
+        if counter == 20 or request.POST.get('END') == 'STOP':
             score1 = (total_q_ans_correct / (total_q_asked - 1)) * 100
             score = round(score1)
             cat_scores = json.dumps(cat_dict)
