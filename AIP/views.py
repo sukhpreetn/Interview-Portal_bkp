@@ -304,7 +304,7 @@ def scores(request):
     context = {'results': results}
     return render(request, 'AIP/scores.html', context)
 
-#@permission_required('admin.can_add_log_entry')
+@permission_required('admin.can_add_log_entry')
 def quizzes(request):
     quizzes = list(Quiz.objects.all())
     context = {'quizzes': quizzes}
