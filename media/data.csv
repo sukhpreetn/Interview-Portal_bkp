@@ -1,0 +1,22 @@
+q_subject|q_cat|q_rank|q_text|q_option1|q_option2|q_option3|q_option4|q_answer
+Python|Syntax|Adaptive|<pre> class Parent(object):x = 1 class Child1(Parent):pass class Child2(Parent):pass print (Parent.x| Child1.x| Child2.x) Child1.x = 2 print (Parent.x| Child1.x| Child2.x) Parent.x = 3 print (Parent.x| Child1.x| Child2.x)</pre>1 1 1 <br>1 2 1<br> 3 2 3| 1 1 1 <br>2 1 1<br> 3 2 3|Error| None|1
+Python|Syntax|Adaptive|Python supports MySQL DB by default|True| False| All of the Above| None of the Above|2
+Python|Syntax|Adaptive|<pre> for x in range(2|11|2):var1.append(x) var2 = var1[1:-1] print(var1) print(var2)</pre>|4| 6| 8| Error|4
+Python|Syntax|Adaptive|A tuple colors contains five elements. How can you set the 3rd element of the tuple to Python? |colors[2]=Python| colors(2)=Python| colors[3]=Python| None of the above|4
+Python|Syntax|Adaptive|It is not possible to import more than one module in a python file|True| False| Possible only for custom modules| Possible only for standard modules|2
+Python|Syntax|Adaptive|In dictionaries duplicate values are allowed|True| False| All of the Above| None of the Above|1
+Python|Syntax|Adaptive|print type(1|2) prints class tuple| class int| class list| Error|4
+Python|Syntax|Adaptive|<pre> def test(a|b): return a+b return a-b What is the output of below code? print(test(6|5))</pre>|(11,1)| [11,1]| ([11,1])| None of the above|4
+Python|Syntax|Adaptive|<pre> def test(a|b): return a+b|a-b What does it print? print(test(6,5))</pre>|(11,1)| [11,1]| 11| Error|1
+Python|Syntax|Adaptive|s=Python strings are immutable;print(s.startswith(Pyth)); prints|True| False| 0| 1|1
+Python|Syntax|Adaptive|sen= I love Python ; print(sen.rstrip())|I love Python| I love Python| Error| None of the Above|4
+Python|Syntax|Adaptive|Dictionary cannot have tuples as a key|True| False| All of the Above| None of the Above|2
+Python|Syntax|Adaptive|s= set([1,1,2,3,3,3,4,5]); print(len(s))|5| 7| Error| None of the Above|1
+Python|Syntax|Adaptive|<pre> s=int(input(Enter First Value: )) 10 t=int(input(Enter Second Value: )) 30 print (s+t)</pre>|40| 1030| 10 30| Error|1
+Python|Syntax|Adaptive|print(a=10)|10| a=10| Error| None of the Above|3
+Python|Syntax|Adaptive|In a module| there can be two functions with the same name|True| False| All of the above| None of the Above|2
+Python|Syntax|Adaptive|Python supports null datatype|True| False| All of the above| None of the Above|2
+Python|Syntax|Adaptive|<pre> x=101 if x >= 100: break print(x)</pre>|101| 100| Error| None|3
+Python|Syntax|Adaptive|<pre> s=lambda t:t[::-1] print(s([3,1,2]))</pre>|[3,1,2]| [2,1,3]| Error| None|2
+Python|Syntax|Adaptive|print(int(sixtwothree))| prints[6,2,3] |(6,2,3)| Error| None|3
+Python|Syntax|Adaptive|Sort| sorts the value in descending order by default|True| False| Error| None|2

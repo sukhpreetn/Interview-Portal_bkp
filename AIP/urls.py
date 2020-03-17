@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path , include
 from . import views
+from django.views.generic.base import TemplateView # new
 
 
 app_name = 'AIP'
@@ -21,6 +22,12 @@ urlpatterns = [
     path('add/', views.add, name='add'),
     path('questionupload/', views.questionupload, name='questionupload'),
     path('scores/', views.scores, name='scores'),
+    path('quizzes/', views.quizzes,name='quizzes'),
+    path('addquiz/', views.addquiz,name='addquiz'),
+    path('addquestion/', views.addquestion, name='addquestion'),
+    path('addquestion1/', views.addquestion1, name='addquestion1'),
+    path('quizbucket/', views.quizbucket, name='quizbucket'),
+
 ]
 
 if settings.DEBUG:

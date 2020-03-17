@@ -2,6 +2,16 @@ from django.db import models
 from datetime import datetime
 
 # Create your models here.
+class Quiz(models.Model):
+    quiz_name                        = models.CharField(max_length=100,default='')
+    quiz_subject                     = models.CharField(max_length=40,default='')
+    quiz_questions                   = models.TextField(null=True)
+    quiz_noofquest                   = models.IntegerField(default=0)
+    quiz_nooftimestaken              = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.quiz_name + "_" + self.quiz_subject
+
 class Question(models.Model):
     q_subject                    = models.CharField(max_length=40)
     q_cat                        = models.CharField(max_length=40)
@@ -41,5 +51,6 @@ class Result(models.Model):
 
     def __str__(self):
         return self.c_user
+
 
 

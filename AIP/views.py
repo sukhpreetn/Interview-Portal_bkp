@@ -1,21 +1,20 @@
 import datetime
-
 from django.http import HttpResponse, request, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from django.utils.datastructures import MultiValueDictKeyError
 from django.core.files.storage import FileSystemStorage
-from .models import Question, Answer, Result
+from django.views import generic
+
+from .models import Question, Answer, Result,Quiz
 from django.http import HttpResponse
 import json
 import random
 import csv, io
-
 from django.contrib import messages
 from django.contrib.auth.decorators import permission_required
 from .forms import QuestionForm
-
 from django.contrib.auth.models import User
-
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,UpdateView)
 
 def index(request):
     return render(request, 'AIP/index.html')
@@ -264,16 +263,6 @@ def debug(request):
     return response
 
 
-def add(request):
-    if request.method == 'POST':
-        form = QuestionForm(request.POST)
-        if form.is_valid():
-            question = form.save()
-            question.save()
-        return redirect('AIP:index')
-    else:
-        form = QuestionForm()
-    return render(request, 'AIP/add.html', {'form': form})
 
 
 @permission_required('admin.can_add_log_entry')
@@ -314,3 +303,84 @@ def scores(request):
     results = Result.objects.all().order_by('-c_attempt_date')
     context = {'results': results}
     return render(request, 'AIP/scores.html', context)
+
+#@permission_required('admin.can_add_log_entry')
+def quizzes(request):
+    quizzes = list(Quiz.objects.all())
+    context = {'quizzes': quizzes}
+    return render(request, 'AIP/quizzes.html',context)
+
+def addquiz(request):
+    return  render(request, 'AIP/quizadd.html')
+
+def  addquestion(request):
+    subject = request.POST['Subject']
+    category = request.POST['Category']
+    request.session['subject'] = subject
+    request.session['category'] = category
+    request.session['questionlist'] = []
+    request.session['count'] = 1
+    request.session['countdrop'] = 1
+    questions = list(Question.objects.all())
+    context = {'subject': subject, 'category': category, 'questions': questions}
+    return render(request, 'AIP/addquestion.html', context)
+
+
+def add(request):
+    #return  HttpResponse(request.method)
+    subject = request.session['subject']
+    category = request.session['category']
+    count = request.session['count']
+    if request.method == 'POST':
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            question = form.save()
+            question.save()
+
+            if count == 2:
+                #quizzes = Quiz.objects.all()
+                context = {'subject': subject,'category':category}
+                return render(request, 'AIP/quizzes.html', context)
+
+        count += 1
+        request.session['count'] = count
+        form = QuestionForm()
+        return render(request, 'AIP/add.html',  {'form': form})
+        #return redirect('AIP:index')
+    else:
+        form = QuestionForm()
+        return render(request, 'AIP/add.html', {'form': form})
+
+
+def addquestion1(request):
+    subject          = request.session['subject']
+    category         = request.session['category']
+    questionlist     = request.session['questionlist']
+    countdrop        = request.session['countdrop']
+
+    questions = list(Question.objects.all())
+    context = {'questions': questions}
+    if request.method == 'POST':
+        selectedquestion = request.POST.get('drop1')
+        questionlist.append(selectedquestion)
+
+        if countdrop == 20 or request.POST.get('END') == 'STOP':
+            q = Quiz()
+            q.quiz_name = subject
+            q.quiz_subject = category
+            q.quiz_questions = json.dumps(questionlist)
+            q.quiz_noofquest = countdrop
+            q.save()
+            quizzes = Quiz.objects.all()
+            context = {'quizzes': quizzes}
+            return render(request, 'AIP/quizzes.html',context)
+
+        countdrop += 1
+        request.session['countdrop'] = countdrop
+        return render(request, 'AIP/addquestion1.html', context)
+    else:
+        #return HttpResponse(request.method)
+        return render(request, 'AIP/addquestion1.html', context)
+
+def quizbucket(request):
+    return  render(request, 'AIP/quizbucket.html')
