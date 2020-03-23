@@ -25,6 +25,7 @@
       <link rel="stylesheet" href="{% static 'css/style.css'%}">
    </head>
    <body>
+
       <div class="gtco-loader"></div>
       <div id="page">
          <header id="gtco-header" class="gtco-cover" role="banner">
@@ -32,20 +33,21 @@
                <div class="display-tc">
                    <form id="form" name="form" method="post" action="/addquiz/">{%  csrf_token %}
                       {{ form.as_p }}
-                     <p><strong><i style="color:#000000">Quizzes</i></strong></p>
+                      <p><strong><i style="color:#000000">Welcome {{user}} !!<i></strong></p>
+                      <p><strong><i style="color:#000000">Quizzes in your bucket</i></strong></p>
                        <div class="col-md-7 copy animate-box">
-                           <input type="submit"  name="Begin Test"  value="Add Quiz" class="btn btn-white">
                           <strong> <a style="color: #8C001A" href="/logout" >Logout</a></strong>
                            <p></p>
                         </div>
                         </form>
-                        <table class="table mb-0">
+
+                        <table class="table mb-0" >
                            <thead>
                              <tr>
-                               <th>Quiz</th>
-                               <th>Subject</th>
-                               <th>Questions</th>
-                                 <th>Quiz Link</th>
+                               <th colspan="3">Quiz</th>
+                               <th colspan="3">Subject</th>
+                               <th colspan="3">Questions</th>
+                               <th colspan="3">Quiz Link</th>
                                <th></th>
                              </tr>
                            </thead>
@@ -53,17 +55,24 @@
                              {% for quiz in quizzes %}
                                <tr>
                                  <td class="align-middle">{{ quiz.quiz_name }}</a></td>
+                                  <td></td>
+                                  <td></td>
                                  <td class="align-middle">{{ quiz.quiz_subject }}</td>
+                                  <td></td>
+                                    <td></td>
                                  <td class="align-middle">{{ quiz.quiz_noofquest }}</td>
-                                 <td>
-                                  <!-- <strong> <a style="color: #8C001A" href="/quiz/{{ quiz.pk }}" >/quiz/{{ quiz.pk }}</a></strong> -->
-                                     <strong> <a style="color: #8C001A" href="/quizlist" > View Quiz</a></strong>
+                                  <td></td>
+                                    <td></td>
+                                   <td>
+                                   <strong> <a style="color: #8C001A" href="/quiz/{{ quiz.pk }}" >/quiz/{{ quiz.pk }}</a></strong>
                                  </td>
-                             {% empty %}
-                               <tr>
-                                 <td class="bg-light text-center font-italic" colspan="5">You haven't created any quiz yet.</td>
+                                  <td></td>
+                                  <td class="text-right">
+                                      <a href="{% url 'AIP:takequiz' quiz.pk %}" class="btn btn-primary">Start quiz</a>
+                                 </td>
                                </tr>
                              {% endfor %}
+
                            </tbody>
                          </table>
                </div>

@@ -40,7 +40,6 @@ class Answer(models.Model):
     def __str__(self):
         return self.ans_option
 
-
 class Result(models.Model):
     c_user                      = models.CharField(max_length=100)
     c_tot_score                 = models.IntegerField(default=0)

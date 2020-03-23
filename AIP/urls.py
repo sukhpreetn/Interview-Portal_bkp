@@ -18,7 +18,6 @@ urlpatterns = [
     path('question/', views.question, name='question'),
     path('logout/', views.logout, name='logout'),
     path('export/', views.export, name='export'),
-    path('debug/', views.debug, name='debug'),
     path('add/', views.add, name='add'),
     path('questionupload/', views.questionupload, name='questionupload'),
     path('scores/', views.scores, name='scores'),
@@ -26,7 +25,8 @@ urlpatterns = [
     path('addquiz/', views.addquiz,name='addquiz'),
     path('addquestion/', views.addquestion, name='addquestion'),
     path('addquestion1/', views.addquestion1, name='addquestion1'),
-    path('quizbucket/', views.quizbucket, name='quizbucket'),
+    path('quizlist/', views.quizbucket, name='quizbucket'),
+    path('quiz/<int:pk>/', views.takequiz, name='takequiz'),
 
 ]
 
