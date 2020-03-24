@@ -58,7 +58,8 @@
                            {% endfor %}
                         </table>
                         <p></p>
-                        <a href="{% url 'AIP:pickskill' %}" class="btn btn-white">Start Over</a>
+                        <!--<a href="{% url 'AIP:pickskill' %}" class="btn btn-white">Start Over</a>-->
+
                         <form method ="post" action="/comment/">{%csrf_token%}
                            <b style="color:#000000">Would you like to add a Comment or any suggestions:</b><br>
                            <textarea rows=3 cols=80  name="comment" required></textarea><br>

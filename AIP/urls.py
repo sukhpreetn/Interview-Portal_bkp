@@ -1,9 +1,9 @@
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.urls import path , include
 from . import views
 from django.views.generic.base import TemplateView # new
-
 
 app_name = 'AIP'
 
@@ -27,6 +27,8 @@ urlpatterns = [
     path('addquestion1/', views.addquestion1, name='addquestion1'),
     path('quizlist/', views.quizbucket, name='quizbucket'),
     path('quiz/<int:pk>/', views.takequiz, name='takequiz'),
+    path('searchquiz/', views.searchquiz, name='searchquiz'),
+    path('compare/', views.compare, name='compare'),
 
 ]
 

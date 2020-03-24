@@ -1,101 +1,259 @@
-q_subject|q_cat|q_rank|q_text|q_option1|q_option2|q_option3|q_option4|q_answer
-Python|All|Beginner|Python is cross platform |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|s=[1,2];t=[3,4];print(s+t) |[1,2,3,4]|[4,6]|All of the Above|None of the Above |1
-Python|All|Beginner|tup=(4,5);print len(tup) |0|1|2|Error |3
-Python|All|Beginner|Is this an valid statement: 'I have eaten'+10+'apples' |True|False|All of the above|None of the Above |2
-Python|All|Beginner|fruit='Apple'; print(fruit(::-1)); prints |elppA|e|Apple|Error |4
-Python|All|Beginner|animal='Elephant'; print(animal[7]; prints) |n|t|Error|None of the Above |2
-Python|All|Beginner|list1=[5,6,7,'apple',(10,20)];print(len(list1))  |5|6|7|Error |1
-Python|All|Beginner|Is this a valid statement: print(apple*2) |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|print('grapes'=='Grapes') prints |Error|True|False|1 |3
-Python|All|Beginner|login= {} is a valid dictionary |True|False|None of the above|All of the above |1
-Python|All|Beginner|print(not True) |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|d={'place':'bangalore'}; d['state']='KA' will add key state to the dictionary |True|False|All of the Above|None of the Above|1
-Python|All|Beginner|'as' in ['ass','bass','class','gas']  |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|d={'fruit':'apple','color':'green'}; print (d['color']) |apple|green|red|Error |2
-Python|All|Beginner|print(max(100,89,171,99)) |171|100|Error|None of the Above |1
-Python|All|Beginner|lis1=[4,5,6]; lis1.append(8) |appends data at the end |appends data at any position|Error|None of the Above |1
-Python|All|Beginner|print(type(None)) prints |String|NoneType|Error|None of the Above |2
-Python|All|Beginner|List can have duplicate values |True|False|All of the above|None of the Above |1
-Python|All|Beginner|fruit='orange';fruit='grapes';print(fruit) |orange|grapes|orange and grapes|Error |2
-Python|All|Beginner|list1=[4,3,2,1,10];print(list1[5]) |10|1|Error|None of the Above |3
-Python|All|Beginner|fp=open('file.txt') |opens a file in read mode|opens a file in read and write mode|opens a file in write mode|opens file in append mode |1
-Python|All|Beginner|def test(a=10,b): print(a); test(4,5) |4|10|5|Error |4
-Python|All|Beginner|Python supports do..while loop |True|False|All of the above|None of the above |2
-Python|All|Beginner|A function can be called directly but cannot be called in another function |True|False|All of the above|None of the Above|2
-Python|All|Beginner|Which of the following is valid for loop |for a in range(1,3):print(a)|for a in (3): print(a)|for a in loop(3): print(a)|for ain (1,3):print(a) |1
-Python|All|Beginner|A function has to be called before defining it |True|False|None of the Above|All of the above |2
-Python|All|Beginner|file.closed returns true if the file is closed |True|False|None of the Above|All of the above |1
-Python|All|Beginner|what does the following function return, def test(a,b,c=50):return a; return c; test(3,4,10) |3 and 10|3 and 50|3|50|3
-Python|All|Beginner|A module name is the file name with .py extension |True|False|None of the Above|All of the above |1
-Python|All|Beginner|from modulename import name1,name2 imports all the functions from that module  |True|False|None of the above|All of the above|2
-Python|All|Beginner|Modules can import other modules |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|pip install <modulename> is used to install python packages |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Are these statements valid, import factorial; factorial(5) |True|False|All of the above|None of the above |2
-Python|All|Beginner|os and sys modules are third party modules |True|False|All of the above|None of the above |2
-Python|All|Beginner|dir() built-in function is used to get the names, defined by a module |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Which of the following are valid |from os import *|from os import walk,rename|None of the above|All of the above |4
-Python|All|Beginner|Which of the function is not built-in function in python |factorial()|input()|print()|All of the above |1
-Python|All|Beginner|Which of the following is not a valid assignment operator? |a+=1|a-=1|a*=1|a++=1 |4
-Python|All|Beginner|elseif is a valid construct in python |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|sys.argv contains the command line arguments passed to a python program |True|False|All of the Above|None of the Above|1
-Python|All|Beginner|It is not possible to create custom exceptions in Python |True|False|All of the above|None of the above |2
-Python|All|Beginner|Which of the following is correct |An exception is an error that occurs at the runtime|A syntax error is also an exception|An exception is used to exclude a block of code in Python|All of the above |1
-Python|All|Beginner|What will happen if you try to open a file that doesn't exist |A new file is created|Nothing will happen|An exception israised|None of the above |3
-Python|All|Beginner|There can be more than one finally clause in python |True|False|All of the above|None of the Above |2
-Python|All|Beginner|What is the output ... num=5.0; try: print(5/num); except: print('Exception Occured') |1.0|5.0|0|Exception |1
-Python|All|Beginner|__init__ method is mandatory for all the classes |True|False|None of the Above|All of the above |2
-Python|All|Beginner|There can be more than one class in a module |True|False|None of the Above|All of the above |1
-Python|All|Beginner|Class variables can be shared by all instances of a class |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|def test(): print('Good Day'); a=test() |test() is a function and 'a' is a variable|Both test() and 'a' refer to the same object|test() and 'a' refer to different objects|Syntax Error |1
-Python|All|Beginner|Finally clause is not executed when an exception occurs |True|False|Ignore|Ignore |2
-Python|All|Beginner|Methods are functions defined inside the body of the class |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|self is an optional argument in all the methods of the class |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|It is possible to have same class name in two different modules  |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Inheritance is a way to form new classes using classes that have already been defined. |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Are the two function calls valid, def add(a,b): print(a+b); add(4,5);add('Good','Morning') |Only the first call is valid|Only the second call is valid|Both the calls are valid|None of the Above |3
-Python|All|Beginner|a=10; def test(): a=a+1; print(a); test() |prints 10 |prints 11|Error|None of the Above |3
-Python|All|Beginner|a=10; def test(): print(a+1); test() |prints 10 |prints 11|Error|None of the Above |2
-Python|All|Beginner|NameError is displayed when a variable is not defined |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Is this a valid python class, class TestClass:'''This is a test class''' ;pass |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|Which of the following statements can be used to check, whether an object 'obj' is an instance of class A or not? |obj.isinstance(A)|A.isinstance(obj)|isinstance(obj, A)|isinstance(A, obj) |3
-Python|All|Beginner|Which module in python supports regular expressions? |regex|re|pyregex|regularexpressions |2
-Python|All|Beginner|What does the function re.match do?  |matches a pattern at any position in the string|matches a pattern at starting position of the string|there is no such function|None of the above |2
-Python|All|Beginner|What does the function re.search do?  |matches a pattern at any position in the string|matches a pattern at starting position of the string|there is no such function|None of the above |1
-Python|All|Beginner|Which of the following print statements will print all the names from the list on the seperate line, names=['apple','orange','pear','kiwi'] |print('\n'.join(names))|print(names.join('\n'))|print(names.append('\n'))|None of the above |1
-Python|All|Beginner|s=(3);What is the type of s |tuple|str|int|float |3
-Python|All|Beginner|Which of the following functions can help us to find the version of python that we are currently working on?|sys.version|sys.version()|sys.version(0)|None of the above |1
-Python|All|Beginner|Third party modules/packages in python are installed in site-packages folder |True|False|None of the above|All of the above |1
-Python|All|Beginner|What is the command to see the modules that are installed on your machine?  |dir('modules')|help('modules')|list('modules')|All of the above |2
-Python|All|Beginner|Objects are created from class |True|False|Error|None |1
-Python|All|Beginner|from math import sin; print(cos(90)); prints the value of cos(90) |True|False|Error|None |3
-Python|All|Beginner|Lambda functions takes only two arguments |True|False|Error|None |2
-Python|All|Beginner|os module in python provides a way of using operating system dependent functionality |True|False|No such module|None of theabove |1
-Python|All|Beginner|os.environ gets the users environment  |True|False|No such module|None of the above |1
-Python|All|Beginner|Web scrapping is a technique used to extract content from webpages |True|False|No such module|None of the above |1
-Python|All|Beginner|Importing a module that does not exist will raise what type of exception |KeyError|NameError|TypeError|ImportError |4
-Python|All|Beginner|Lambda functions can have any number of expressions |True|False|None of the above|All of the above |2
-Python|All|Beginner|Which keyword is used to define Anonynous functions in python |def|function|lambda|All of the above |3
-Python|All|Beginner|"" import re sum = 0 pattern = 'back' if re.match(pattern, 'backup.txt'):sum += 1 if re.match(pattern, 'text.back'):sum += 2 if re.search(pattern,'backup.txt'):sum += 4 if re.search(pattern, 'text.back'):sum += 8 print(sum)"" |1|15|5|13 |4
-Python|All|Beginner|Flask framework is used for web development |True|False|All of the Above|None of the Above |1
-Python|All|Beginner| class Parent(object):x = 1 class Child1(Parent):pass class Child2(Parent):pass print (Parent.x, Child1.x, Child2.x) Child1.x = 2 print (Parent.x, Child1.x, Child2.x) Parent.x = 3 print (Parent.x, Child1.x, Child2.x) |1 1 1 <br>1 2 1<br> 3 2 3|1 1 1 <br>2 1 1<br> 3 2 3|Error|None |1
-Python|All|Beginner|Python supports MySQL DB by default |True|False|All of the Above|None of the Above |2
-Python|All|Beginner| for x in range(2,11,2):var1.append(x) var2 = var1[1:-1] print(var1) print(var2) |4|6|8|Error |4
-Python|All|Beginner|A tuple 'colors' contains five elements. How can you set the 3rd element of the tuple to 'Python'? |colors[2]='Python'|colors(2)='Python'|colors[3]='Python'|None of the above |4
-Python|All|Beginner|It is not possible to import more than one module in a python file |True|False|Possible only for custom modules|Possible onlyfor standard modules |2
-Python|All|Beginner|In dictionaries duplicate values are allowed |True|False|All of the Above|None of the Above |1
-Python|All|Beginner|print type(1,2) prints  |class 'tuple'|class 'int'|class 'list'|Error |4
-Python|All|Beginner| def test(a,b): return a+b return a-b What is the output of below code? print(test(6,5)) |(11,1)|[11,1]|([11,1])|None of the above |4
-Python|All|Beginner| def test(a,b): return a+b,a-b What does it print? print(test(6,5)) |(11,1)|[11,1]|11|Error |1
-Python|All|Beginner|s='Python strings are immutable';print(s.startswith('Pyth')); prints |True|False|0|1 |1
-Python|All|Beginner|sen=' I love Python '; print(sen.rstrip()) |I love Python|I love Python|Error|None of the Above |4
-Python|All|Beginner|Dictionary cannot have tuples as a key |True|False|All of the Above|None of the Above |2
-Python|All|Beginner|s= set([1,1,2,3,3,3,4,5]); print(len(s)) |5|7|Error|None of the Above |1
-Python|All|Beginner| s=int(input('Enter First Value: ')) 10 t=int(input('Enter Second Value: ')) 30 print (s+t) |40|1030|1030|Error |1
-Python|All|Beginner|print(a=10) |10|a=10|Error|None of the Above |3
-Python|All|Beginner|In a module, there can be two functions with the same name |True|False|All of the above|None of the Above |2
-Python|All|Beginner|Python supports null datatype |True|False|All of the above|None of the Above |2
-Python|All|Beginner| x=101 if x >= 100: break print(x) |101|100|Error|None |3
-Python|All|Beginner| s=lambda t:t[::-1] print(s([3,1,2])) |[3,1,2]|[2,1,3]|Error|None |2
-Python|All|Beginner|print(int('sixtwothree')), prints |6,2,3|(6,2,3)|Error|None |3
-Python|All|Beginner|Sort, sorts the value in descending order by default |True|False|Error|None |2
+q_subject|q_cat|q_rank|q_text|q_option1|q_option2|q_option3|q_option4|q_answer|q_ask_time|no_times_ques_served|no_times_anwered_correctly|no_times_anwered_incorrectly|difficulty_score
+Python|All|Beginner|"tup=(4,5)
+print len(tup)"|0|1|2|Error|3|2020-03-23 18:44:46+00:00|0|0|0|0.00
+Python|All|Beginner|"what is output of below?
+
+a=10
+def test():
+	print(a+1)
+
+test()"|prints 10|prints 11|Error|None of the Above|2|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|Methods are functions defined inside the body of the class |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.549352+00:00|3|0|3|0.00
+Python|All|Beginner|Inheritance is a way to form new classes using classes that have already been defined. |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.560788+00:00|6|1|5|0.00
+Python|All|Beginner|"what will be output of below?
+
+a=10
+def test():
+	a=a+1
+	print(a)
+
+test()"|prints 10|prints 11|Error|None of the Above|3|2020-03-23 18:42:50+00:00|4|3|1|0.00
+Python|All|Beginner|Which of the following statements can be used to check, whether an object 'obj' is an instance of class A or not? |obj.isinstance(A)|A.isinstance(obj)|isinstance(obj, A)|isinstance(A, obj) |3|2020-03-23 18:42:50.584453+00:00|1|1|0|0.00
+Python|All|Beginner|There can be more than one finally clause in python |True|False|All of the above|None of the Above |2|2020-03-23 18:42:50.523695+00:00|8|5|3|0.00
+Python|All|Beginner|__init__ method is mandatory for all the classes |True|False|None of the Above|All of the above |2|2020-03-23 18:42:50.531625+00:00|9|5|4|0.00
+Python|All|Beginner|"s=(3);
+What is the type of s"|tuple|str|int|float|3|2020-03-23 18:42:50+00:00|8|0|8|0.00
+Python|All|Beginner|Which module in python supports regular expressions? |regex|re|pyregex|regularexpressions |2|2020-03-23 18:42:50.588282+00:00|1|0|1|0.00
+Python|All|Beginner|Which keyword is used to define Anonynous functions in python |def|function|lambda|All of the above |3|2020-03-23 18:42:50.650471+00:00|1|1|0|0.00
+Python|All|Beginner|"def test():
+	print('Good Day')
+
+a=test()"|test() is a function and 'a' is a variable|Both test() and 'a' refer to the same object|test() and 'a' refer to different objects|Syntax Error|1|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|Lambda functions takes only two arguments |True|False|Error|None |2|2020-03-23 18:42:50.625921+00:00|1|0|1|0.00
+Python|All|Beginner|Flask framework is used for web development |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.657864+00:00|4|0|4|0.00
+Python|All|Beginner|os module in python provides a way of using operating system dependent functionality |True|False|No such module|None of theabove |1|2020-03-23 18:42:50.631981+00:00|2|0|2|0.00
+Python|All|Beginner|What does the function re.match do?  |matches a pattern at any position in the string|matches a pattern at starting position of the string|there is no such function|None of the above |2|2020-03-23 18:42:50.592155+00:00|4|0|4|0.00
+Python|All|Beginner|There can be more than one class in a module |True|False|None of the Above|All of the above |1|2020-03-23 18:42:50.535299+00:00|4|0|4|0.00
+Python|All|Beginner|"What is the output of below
+
+num=5.0;
+try:
+	print(5/num)
+except:
+	print('Exception Occured')"|1.0|5.0|0|Exception|1|2020-03-23 18:42:50+00:00|2|0|2|0.00
+Python|All|Beginner|NameError is displayed when a variable is not defined |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.575709+00:00|3|0|3|0.00
+Python|All|Beginner|Third party modules/packages in python are installed in site-packages folder |True|False|None of the above|All of the above |1|2020-03-23 18:42:50.611584+00:00|1|0|1|0.00
+Python|All|Beginner|self is an optional argument in all the methods of the class |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.553150+00:00|1|0|1|0.00
+Python|All|Beginner|Web scrapping is a technique used to extract content from webpages |True|False|No such module|None of the above |1|2020-03-23 18:42:50.639481+00:00|1|0|1|0.00
+Python|All|Beginner|Which of the following functions can help us to find the version of python that we are currently working on?|sys.version|sys.version()|sys.version(0)|None of the above |1|2020-03-23 18:42:50.607590+00:00|2|0|2|0.00
+Python|All|Beginner|"does below prints the value of cos(90) ?
+
+from math import sin
+print(cos(90))"|True|False|Error|None|3|2020-03-23 18:42:50+00:00|4|1|3|0.00
+Python|All|Beginner|Importing a module that does not exist will raise what type of exception |KeyError|NameError|TypeError|ImportError |4|2020-03-23 18:42:50.643330+00:00|5|1|4|0.00
+Python|All|Beginner|What does the function re.search do?  |matches a pattern at any position in the string|matches a pattern at starting position of the string|there is no such function|None of the above |1|2020-03-23 18:42:50.595832+00:00|1|0|1|0.00
+Python|All|Beginner|os.environ gets the users environment  |True|False|No such module|None of the above |1|2020-03-23 18:42:50.635844+00:00|1|0|1|0.00
+Python|All|Beginner|"Is this a valid python class?
+
+class TestClass:
+	'''This is a test class'''
+	pass"|True|False|All of the Above|None of the Above|1|2020-03-23 18:42:50+00:00|3|0|3|0.00
+Python|All|Beginner|It is possible to have same class name in two different modules  |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.556659+00:00|4|0|4|0.00
+Python|All|Beginner|"Which of the following print statements will print all the names from the list on the seperate line
+
+names=['apple','orange','pear','kiwi']"|print('\n'.join(names))|print(names.join('\n'))|print(names.append('\n'))|None of the above|1|2020-03-23 18:42:50+00:00|3|0|3|0.00
+Python|All|Beginner|"Are the two function calls valid?
+
+def add(a,b):
+	print(a+b);
+
+add(4,5)
+add('Good','Morning')"|Only the first call is valid|Only the second call is valid|Both the calls are valid|None of the Above|3|2020-03-23 18:42:50+00:00|2|1|1|0.00
+Python|All|Beginner|Objects are created from class |True|False|Error|None |1|2020-03-23 18:42:50.618999+00:00|4|0|4|0.00
+Python|All|Beginner|Class variables can be shared by all instances of a class |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.538950+00:00|0|0|0|0.00
+Python|All|Beginner|Finally clause is not executed when an exception occurs |True|False|Ignore|Ignore |2|2020-03-23 18:42:50.546063+00:00|0|0|0|0.00
+Python|All|Beginner|Lambda functions can have any number of expressions |True|False|None of the above|All of the above |2|2020-03-23 18:42:50.646878+00:00|0|0|0|0.00
+Python|All|Beginner|What is the command to see the modules that are installed on your machine?  |dir('modules')|help('modules')|list('modules')|All of the above |2|2020-03-23 18:42:50.615533+00:00|2|0|2|0.00
+Python|All|Beginner|"what is output of below code
+
+ import re
+ sum = 0
+ pattern = 'back'
+ if re.match(pattern, 'backup.txt'):
+ 	sum += 1
+ if re.match(pattern, 'text.back'):
+ 	sum += 2
+ if re.search(pattern,'backup.txt'):
+ 	sum += 4
+ if re.search(pattern, 'text.back'):
+ 	sum += 8
+
+ print(sum)"|1|15|5|13|4|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|"Is this a valid statement
+
+print(apple*2)"|True|False|All of the Above|None of the Above|2|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|Which of the following is not a valid assignment operator? |a+=1|a-=1|a*=1|a++=1 |4|2020-03-23 18:42:50.500873+00:00|2|0|2|0.00
+Python|All|Beginner|print(type(None)) prints |String|NoneType|Error|None of the Above |2|2020-03-23 18:42:50.422852+00:00|2|0|2|0.00
+Python|All|Beginner|Which of the function is not built-in function in python |factorial()|input()|print()|All of the above |1|2020-03-23 18:42:50.497026+00:00|1|0|1|0.00
+Python|All|Beginner|"d={'place':'bangalore'}
+
+d['state']='KA'    will add key state to the dictionary"|True|False|All of the Above|None of the Above|1|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|"tup=(4,5)
+print len(tup)"|0|1|2|Error|3|2020-03-23 18:42:50+00:00|4|1|3|0.00
+Python|All|Beginner|A function can be called directly but cannot be called in another function |True|False|All of the above|None of the Above|2|2020-03-23 18:42:50.448906+00:00|0|0|0|0.00
+Python|All|Beginner|Which of the following is valid for loop |for a in range(1,3):print(a)|for a in (3): print(a)|for a in loop(3): print(a)|for ain (1,3):print(a) |1|2020-03-23 18:42:50.452717+00:00|0|0|0|0.00
+Python|All|Beginner|os and sys modules are third party modules |True|False|All of the above|None of the above |2|2020-03-23 18:42:50.485595+00:00|1|0|1|0.00
+Python|All|Beginner|"what is the output of below
+
+s=[1,2]
+t=[3,4]
+print(s+t)"|[1,2,3,4]|[4,6]|All of the Above|None of the Above|1|2020-03-23 18:42:50+00:00|4|0|4|0.00
+Python|All|Beginner|print('grapes'=='Grapes') prints |Error|True|False|1 |3|2020-03-23 18:42:50.393326+00:00|3|1|2|0.00
+Python|All|Beginner|Modules can import other modules |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.474502+00:00|1|0|1|0.00
+Python|All|Beginner|file.closed returns true if the file is closed|True|False|None of the Above|All of the above|1|2020-03-23 18:42:50+00:00|4|0|4|0.00
+Python|All|Beginner|"what does the following function return?
+
+def test(a,b,c=50):
+	return a;
+	return c;
+test(3,4,10)"|3 and 10|3 and 50|3|50|3|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|"from modulename import name1,name2
+
+imports all the functions from that module"|True|False|None of the above|All of the above|2|2020-03-23 18:42:50+00:00|1|1|0|0.00
+Python|All|Beginner|pip install <modulename> is used to install python packages |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.477895+00:00|2|0|2|0.00
+Python|All|Beginner|Python supports do..while loop |True|False|All of the above|None of the above |2|2020-03-23 18:42:50.444913+00:00|4|1|3|0.00
+Python|All|Beginner|"what will be output ?
+
+fruit='orange'
+fruit='grapes'
+
+print(fruit)"|orange|grapes|orange and grapes|Error|2|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|Python is cross platform |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.360174+00:00|2|0|2|0.00
+Python|All|Beginner|List can have duplicate values |True|False|All of the above|None of the Above |1|2020-03-23 18:42:50.426409+00:00|6|0|6|0.00
+Python|All|Beginner|It is not possible to create custom exceptions in Python |True|False|All of the above|None of the above |2|2020-03-23 18:42:50.513144+00:00|3|0|3|0.00
+Python|All|Beginner|"Are these statements valid?
+
+import factorial
+factorial(5)"|True|False|All of the above|None of the above|2|2020-03-23 18:42:50+00:00|3|1|2|0.00
+Python|All|Beginner|"what is output of below code
+
+def test(a=10,b):
+	print(a);
+
+test(4,5)"|4|10|5|Error|4|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|elseif is a valid construct in python |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.505179+00:00|4|0|4|0.00
+Python|All|Beginner|login= {} is a valid dictionary |True|False|None of the above|All of the above |1|2020-03-23 18:42:50.397057+00:00|2|0|2|0.00
+Python|All|Beginner|dir() built-in function is used to get the names, defined by a module |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.489481+00:00|0|0|0|0.00
+Python|All|Beginner|'as' in ['ass','bass','class','gas']  |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.408329+00:00|0|0|0|0.00
+Python|All|Beginner|A module name is the file name with .py extension |True|False|None of the Above|All of the above |1|2020-03-23 18:42:50.467819+00:00|1|0|1|0.00
+Python|All|Beginner|"what is the output of below :
+
+animal='Elephant'
+print(animal[7])"|n|t|Error|None of the Above|2|2020-03-23 18:42:50+00:00|3|0|3|0.00
+Python|All|Beginner|What will happen if you try to open a file that doesn't exist |A new file is created|Nothing will happen|An exception israised|None of the above |3|2020-03-23 18:42:50.520384+00:00|1|1|0|0.00
+Python|All|Beginner|Which of the following are valid |from os import *|from os import walk,rename|None of the above|All of the above |4|2020-03-23 18:42:50.493605+00:00|3|2|1|0.00
+Python|All|Beginner|A function has to be called before defining it |True|False|None of the Above|All of the above |2|2020-03-23 18:42:50.456141+00:00|4|0|4|0.00
+Python|All|Beginner|"list1=[5,6,7,'apple',(10,20)]
+
+print(len(list1))"|5|6|7|Error|1|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|print(not True) |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.400932+00:00|2|0|2|0.00
+Python|All|Beginner|"what is output of ?
+
+d={'fruit':'apple','color':'green'}
+print (d['color'])"|apple|green|red|Error|2|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|"what is the output of below?
+
+fruit='Apple'
+print(fruit(::-1))"|elppA|e|Apple|Error|4|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|print(max(100,89,171,99)) |171|100|Error|None of the Above |1|2020-03-23 18:42:50.415983+00:00|4|2|2|0.00
+Python|All|Beginner|"lis1=[4,5,6]
+lis1.append(8)"|appends data at the end|appends data at any position|Error|None of the Above|1|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|fp=open('file.txt') |opens a file in read mode|opens a file in read and write mode|opens a file in write mode|opens file in append mode |1|2020-03-23 18:42:50.437607+00:00|6|0|6|0.00
+Python|All|Beginner|"list1=[4,3,2,1,10]
+print(list1[5])"|10|1|Error|None of the Above|3|2020-03-23 18:42:50+00:00|3|1|2|0.00
+Python|All|Beginner|sys.argv contains the command line arguments passed to a python program |True|False|All of the Above|None of the Above|1|2020-03-23 18:42:50.509245+00:00|2|0|2|0.00
+Python|All|Beginner|"what will be output of below
+
+print(int('sixtwothree')),"|6,2,3|(6,2,3)|Error|None|3|2020-03-23 18:42:50+00:00|3|2|1|0.00
+Python|All|Beginner|"s= set([1,1,2,3,3,3,4,5])
+
+print(len(s))"|5|7|Error|None of the Above|1|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|"A tuple 'colors' contains five elements.
+How can you set the 3rd element of the tuple to 'Python'?"|colors[2]='Python'|colors(2)='Python'|colors[3]='Python'|None of the above|4|2020-03-23 18:42:50+00:00|5|0|5|0.00
+Python|All|Beginner|print(a=10) |10|a=10|Error|None of the Above |3|2020-03-23 18:42:50.715433+00:00|2|0|2|0.00
+Python|All|Beginner|print type(1,2)  prints   ?|class 'tuple'|class 'int'|class 'list'|Error|4|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|Python supports null datatype |True|False|All of the above|None of the Above |2|2020-03-23 18:42:50.722670+00:00|2|1|1|0.00
+Python|All|Beginner|In dictionaries duplicate values are allowed |True|False|All of the Above|None of the Above |1|2020-03-23 18:42:50.681775+00:00|1|0|1|0.00
+Python|All|Beginner|Python supports MySQL DB by default |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.665692+00:00|2|0|2|0.00
+Python|All|Beginner|Sort, sorts the value in descending order by default |True|False|Error|None |2|2020-03-23 18:42:50.737808+00:00|2|0|2|0.00
+Python|All|Beginner|"what is output of below code
+
+ for x in range(2,11,2):
+ 	var1.append(x)
+ 	var2 = var1[1:-1]
+
+ print(var1)
+ print(var2)"|4|6|8|Error|4|2020-03-23 18:42:50+00:00|2|0|2|0.00
+Python|All|Beginner|In a module, there can be two functions with the same name |True|False|All of the above|None of the Above |2|2020-03-23 18:42:50.718933+00:00|2|0|2|0.00
+Python|All|Beginner|Dictionary cannot have tuples as a key |True|False|All of the Above|None of the Above |2|2020-03-23 18:42:50.703753+00:00|2|0|2|0.00
+Python|All|Beginner|Which of the following is correct |An exception is an error that occurs at the runtime|A syntax error is also an exception|An exception is used to exclude a block of code in Python|All of the above |1|2020-03-23 18:42:50.516636+00:00|4|0|4|0.00
+Python|All|Beginner|"what will be output of below ?
+
+s='Python strings are immutable'
+
+print(s.startswith('Pyth'));"|True|False|0|1|1|2020-03-23 18:42:50+00:00|2|0|2|0.00
+Python|All|Beginner|"what is the output of below
+
+sen=' I love Python '
+print(sen.rstrip())"|I love Python|I love Python|Error|None of the Above|4|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|"what is output of below
+
+s=lambda t:t[::-1]
+print(s([3,1,2]))"|[3,1,2]|[2,1,3]|Error|None|2|2020-03-23 18:42:50+00:00|2|2|0|0.00
+Python|All|Beginner|"s=int(input('Enter First Value: '))
+ 	10
+ t=int(input('Enter Second Value: '))
+ 	30
+
+
+ print (s+t)  will be ?"|40|1030|1030|Error|1|2020-03-23 18:42:50+00:00|0|0|0|0.00
+Python|All|Beginner|"what is output of below ?
+
+x=101
+if x >= 100:
+    break
+
+print(x)"|101|100|Error|None|3|2020-03-23 18:42:50+00:00|2|2|0|0.00
+Python|All|Beginner|"Is this an valid statement  ?
+'I have eaten'+10+'apples'"|True|False|All of the above|None of the Above|2|2020-03-23 18:42:50+00:00|3|0|3|0.00
+Python|All|Beginner|"class Parent(object):
+	x = 1
+
+class Child1(Parent):
+	pass
+
+class Child2(Parent):
+	pass
+
+print (Parent.x, Child1.x, Child2.x)
+
+Child1.x = 2
+
+print (Parent.x, Child1.x, Child2.x)
+
+Parent.x = 3
+
+print (Parent.x, Child1.x, Child2.x)"|1 1 1 <br>1 2 1<br> 3 2 3|1 1 1 <br>2 1 1<br> 3 2 3|Error|None|1|2020-03-23 18:42:50+00:00|4|0|4|0.00
+Python|All|Beginner|"What is the output of below code?
+
+def test(a,b):
+    return a+b
+    return a-b
+print(test(6,5))"|(11,1)|[11,1]|([11,1])|None of the above|4|2020-03-23 18:42:50+00:00|1|0|1|0.00
+Python|All|Beginner|"def test(a,b):
+  return a+b,a-b
+
+print(test(6,5))
+
+What does it print?"|(11,1)|[11,1]|11|Error|1|2020-03-23 18:42:50+00:00|5|1|4|0.00
+Python|All|Beginner|It is not possible to import more than one module in a python file |True|False|Possible only for custom modules|Possible onlyfor standard modules |2|2020-03-23 18:42:50.676925+00:00|4|0|4|0.00

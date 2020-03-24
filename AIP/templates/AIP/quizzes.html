@@ -43,7 +43,8 @@
                            <thead>
                              <tr>
                                <th>Quiz</th>
-                               <th>Subject</th>
+                               <th>Name</th>
+                               <th>Questions</th>
                                <th>Questions</th>
                                  <th>Quiz Link</th>
                                <th></th>
@@ -53,7 +54,7 @@
                              {% for quiz in quizzes %}
                                <tr>
                                  <td class="align-middle">{{ quiz.quiz_name }}</a></td>
-                                 <td class="align-middle">{{ quiz.quiz_subject }}</td>
+                                 <td class="align-middle">{{ quiz.quiz_OrgIdentifier }}</td>
                                  <td class="align-middle">{{ quiz.quiz_noofquest }}</td>
                                  <td>
                                   <!-- <strong> <a style="color: #8C001A" href="/quiz/{{ quiz.pk }}" >/quiz/{{ quiz.pk }}</a></strong> -->

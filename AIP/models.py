@@ -4,13 +4,12 @@ from datetime import datetime
 # Create your models here.
 class Quiz(models.Model):
     quiz_name                        = models.CharField(max_length=100,default='')
-    quiz_subject                     = models.CharField(max_length=40,default='')
+    quiz_OrgIdentifier               = models.CharField(max_length=40,default='')
     quiz_questions                   = models.TextField(null=True)
     quiz_noofquest                   = models.IntegerField(default=0)
-    quiz_nooftimestaken              = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.quiz_name + "_" + self.quiz_subject
+        return self.quiz_name + "_" + self.quiz_OrgIdentifier
 
 class Question(models.Model):
     q_subject                    = models.CharField(max_length=40)
@@ -42,6 +41,7 @@ class Answer(models.Model):
 
 class Result(models.Model):
     c_user                      = models.CharField(max_length=100)
+    c_quiz_name                 = models.CharField(max_length=100,default='')
     c_tot_score                 = models.IntegerField(default=0)
     c_cat_scores                = models.TextField(null=True,default=0)
     c_comment                   = models.TextField(null=True,default='')

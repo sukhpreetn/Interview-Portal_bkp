@@ -1,13 +1,6 @@
 q_subject|q_cat|q_rank|q_text|q_option1|q_option2|q_option3|q_option4|q_answer
-Python|Syntax|Beginner|__init__ method is mandatory for all the classes| True|False|None of the Above|All of the above|2
-Python|Syntax|Beginner|Python is cross platform|True|False|All of the Above|None of the Above|0
-Python|Syntax|Beginner|s=[1,2];t=[3,4];print(s+t)|[1,2,3,4]|[4,6]|All of the Above|None of the Above|1
-Python|Syntax|Beginner|tup=(4,5);print len(tup)| 0|1|2|Error|3
-Python|Syntax|Beginner|from modulename import name1,name2 imports all the functions from that module | True|False|None of the above|All of the above|2
-Python|Syntax|Beginner|Modules can import other modules| True|False|All of the Above|None of the Above|1
-Python|Syntax|Beginner|pip install <modulename> is used to install python packages| True|False|All of the Above|None of the Above|1
-Python|Syntax|Beginner|Are these statements valid, import factorial; factorial(5)| True|False|All of the above|None of the above|2
-Python|Syntax|Beginner|os and sys modules are third party modules| True|False|All of the above|None of the above|2
-Python|Syntax|Beginner|sys.argv contains the command line arguments passed to a python program| True|False|All of the Above|None of the Above| 1
-Python|Syntax|Beginner|It is not possible to create custom exceptions in Python| True|False|All of the above|None of the above|2
-Python|Syntax|Beginner|There can be more than one finally clause in python| True|False|All of the above|None of the Above|2
+Python|All|Beginner|Python is cross platform |True|False|All of the Above|None of the Above |1
+Python|All|Beginner|s=[1,2];t=[3,4];print(s+t) |[1,2,3,4]|[4,6]|All of the Above|None of the Above |1
+Python|All|Beginner|tup=(4,5);print len(tup) |0|1|2|Error |3
+Python|All|Beginner|Is this an valid statement: 'I have eaten'+10+'apples' |True|False|All of the above|None of the Above |2
+Python|All|Beginner|fruit='Apple'; print(fruit(::-1)); prints |elppA|e|Apple|Error |4

@@ -29,7 +29,7 @@
          <header id="gtco-header" class="gtco-cover" role="banner">
             <div class="gtco-container">
                <div class="display-tc">
-                     <h3><strong>Score Sheet : </strong></h3>
+                     <h3><strong>Score Sheet for Quiz : {{quiz}} </strong></h3>
                    {% for data in result %}
                         {{result.c_tot_score}}
                         {{result.c_cat_scores}}
@@ -50,6 +50,7 @@
                      <body>
                         <table style="width:100% color = ">
                            <tr>
+                              <th style="color:#000000"> <i>Quiz  </i> </th>
                               <th style="color:#000000"> <i>User  </i> </th>
                               <th style="color:#000000"> <i> Total Score  </i></th>
                               <th style="color:#000000"> <i> Category Score  </i></th>
@@ -57,6 +58,7 @@
                            </tr>
                              {% for result in results %}
                               <tr>
+                                 <td style="color:#0000ff" > {{result.c_quiz_name}}    </td>
                                  <td style="color:#0000ff" > {{result.c_user}}    </td>
                                  <td style="color:#0000ff" > {{result.c_tot_score}}  </td>
                                   <td style="color:#0000ff" > {{result.c_cat_scores}}
